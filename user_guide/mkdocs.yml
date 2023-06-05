@@ -1,0 +1,27 @@
+site_name: Winterbloom ? User Guide
+site_url: https://?.wntr.dev
+copyright: "© 2021 Winterbloom, Licensed under Creative Commons CC BY-SA 4.0"
+repo_url: "https://github.com/wntrblm/?"
+edit_uri: edit/main/user_guide/docs
+theme:
+    name: winterbloom
+markdown_extensions:
+    - admonition
+    - def_list
+    - attr_list
+    - toc:
+          permalink: "#"
+          toc_depth: 2-3
+    - pymdownx.highlight:
+          use_pygments: True
+    - pymdownx.superfences
+    - pymdownx.magiclink
+    - md_in_html
+    - markdown_link_attr_modifier:
+          new_tab: "external_only"
+          custom_attrs:
+              referrerpolicy: "origin"
+nav:
+    - "User Guide": index.md
+    - "Kit Build Instructions": build.md
+
