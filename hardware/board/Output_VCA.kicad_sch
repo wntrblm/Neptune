@@ -904,7 +904,7 @@
     (uuid 6598dc06-0dc7-434a-b01b-cb4f7dcea794)
   )
 
-  (text "Controls the Output Volume\n\nCV input:\n5v Nominal Max\n\n\n"
+  (text "Controls the Output Volume\n\nCV input:\n5v Nominal Max\nCV Cutoff ~2.5khz\n\n"
     (at 27.94 49.53 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 1623845e-2b71-4d11-a439-2f433b4ca7fb)

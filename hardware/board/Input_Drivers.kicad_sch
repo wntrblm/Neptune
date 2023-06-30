@@ -780,7 +780,7 @@
     (effects (font (size 5 5) (thickness 0.508) bold) (justify left bottom))
     (uuid 2aa9505d-a1c1-4cc0-ad00-359ef1616fa7)
   )
-  (text "Reduces Input Amplitude, Corrects Signal Inversion, and Limits High Frequencies into the Filter Core\n\nInput Amplitude\n±5v Nominal\n\nOutput Amplitude:\n±50mV Nominal max\n\nCutoff Frequency:\n~20kHz\n\n\n"
+  (text "Reduces Input Amplitude, Corrects Signal Inversion, and Limits High Frequencies into the Filter Core\n\nInput Amplitude\n±5v Nominal\n\nOutput Amplitude:\n±50mV Nominal max\n\nCutoff Frequency:\n~80kHz\n\n\n"
     (at 19.05 52.07 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 78578ae0-aeaa-428a-a277-6a024d24d2b0)
@@ -846,7 +846,7 @@
     (property "Reference" "C?" (at 93.9736 77.47 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "3.3n" (at 93.9736 80.01 90)
+    (property "Value" "1n" (at 93.9736 80.01 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "winterbloom:C_0603_HandSolder" (at 93.98 85.09 0)
@@ -886,7 +886,7 @@
           (reference "C?") (unit 1)
         )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
-          (reference "C4") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
     )
@@ -1054,7 +1054,7 @@
     (property "Reference" "C?" (at 198.12 111.1313 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "3.3n" (at 198.12 113.6713 0)
+    (property "Value" "1n" (at 198.12 113.6713 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "winterbloom:C_0603_HandSolder" (at 195.58 113.03 0)
@@ -1094,7 +1094,7 @@
           (reference "C?") (unit 1)
         )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
-          (reference "C5") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
     )

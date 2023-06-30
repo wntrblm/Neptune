@@ -101,18 +101,9 @@
     (uuid fd4fd0ba-bab6-42ab-9be4-9dcbbb065d8c)
   )
 
-  (text "Could change CV1 attenuverter to have a bit of curve or deadzone?\nRight now this is using my symbol for the matched transistor.\nLEDs don't have strong specifics, my prototypes use standard white leds\nWe have a spare op amp, should we use it for something?\n\nWhere should we add test points?\n	Top and bottom of ladder\n	CV mixer out?\n	filter core output?\n	Instability output?\n	Resonance output?\n"
-    (at 0 -2.54 0)
-    (effects (font (size 2 2)) (justify left bottom))
-    (uuid 1033577d-18f3-4edc-9d28-23ad0e5c6643)
-  )
   (text "Diode Ladder Filter" (at 17.78 25.4 0)
     (effects (font (size 5 5) (thickness 0.508) bold) (justify left bottom))
     (uuid 61406eb9-c665-4f15-97b1-a7e9c515e973)
-  )
-  (text "Questions/Notes" (at -1.27 -40.64 0)
-    (effects (font (size 12 12)) (justify left bottom))
-    (uuid bd6bdd5f-6015-4a7d-83d3-e0565b5567f8)
   )
   (text "4 Pole Diode Ladder Filter\n\nInspired by the filter by Moritz Klein\n\n\n"
     (at 19.05 39.37 0)

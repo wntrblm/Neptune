@@ -506,8 +506,8 @@
     (effects (font (size 5 5) (thickness 0.508) bold) (justify left bottom))
     (uuid 3e3e24c4-724d-4f2a-817d-2190ea62b411)
   )
-  (text "This cannot be combined into op amp one led driver\nbecause at the center cutoff frequency both LEDS are lit.\nOne indicates the the low pass opening up\nand the other the high pass opening up\nIn the center they are both open so both LEDS are lit\nI'm not married to this functionality though"
-    (at 17.78 41.91 0)
+  (text "This cannot be combined into op amp one led driver\nbecause at the center cutoff frequency both LEDS are lit.\nOne indicates the the low pass opening up\nand the other the high pass opening up\n\nIn my prototypes they are just basic white LEDs, but we can change this."
+    (at 16.51 41.91 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 9492064a-f647-48f5-bd13-157cdd60b155)
   )
