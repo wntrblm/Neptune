@@ -1,6 +1,6 @@
-# Winterbloom Helium and Copyright Notices
+# Winterbloom [Diode_Filter] and Copyright Notices
 
-Helium is (c) 2021 by Winterbloom / Alethea Katherine Flowers
+[Diode_Filter] is (c) 2023 by Winterbloom / Alethea Katherine Flowers
 
 This notice must be included in any distributions of this project or
 derivative works.

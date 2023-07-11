@@ -101,9 +101,18 @@
     (uuid fd4fd0ba-bab6-42ab-9be4-9dcbbb065d8c)
   )
 
+  (text "Questions/Todo" (at 194.31 29.21 0)
+    (effects (font (size 5 5) (thickness 0.508) bold) (justify left bottom))
+    (uuid 31a8bfe9-ca21-4ef6-9dfe-63abee559221)
+  )
   (text "Diode Ladder Filter" (at 17.78 25.4 0)
     (effects (font (size 5 5) (thickness 0.508) bold) (justify left bottom))
     (uuid 61406eb9-c665-4f15-97b1-a7e9c515e973)
+  )
+  (text "How to/ do we need to stabilize buffer op amps?\n\n\n\n"
+    (at 195.58 39.37 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid c91ee2ba-7043-4749-a1a6-dec1770af625)
   )
   (text "4 Pole Diode Ladder Filter\n\nInspired by the filter by Moritz Klein\n\n\n"
     (at 19.05 39.37 0)
