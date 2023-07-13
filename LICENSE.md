@@ -1,6 +1,6 @@
-# Winterbloom [Diode_Filter] and Copyright Notices
+# Winterbloom Neptune and Copyright Notices
 
-[Diode_Filter] is (c) 2023 by Winterbloom / Alethea Katherine Flowers
+Neptune is (c) 2023 by Winterbloom / Alethea Katherine Flowers
 
 This notice must be included in any distributions of this project or
 derivative works.

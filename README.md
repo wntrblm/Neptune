@@ -6,7 +6,7 @@ More details available at https://winterbloom.com/shop/?
 
 ## Repository layout
 
-This repository contains the hardware design files and user guide for [Diode_Filter]:
+This repository contains the hardware design files and user guide for Neptune:
 
 - **hardware/** contains the hardware design files for the mainboard and blank panel. These are all created using KiCAD.
 - **user_guide/** contains the user's guide source files. These are written in Markdown and published using MkDocs.
