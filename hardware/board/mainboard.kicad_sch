@@ -5,13 +5,13 @@
   (paper "USLetter")
 
   (title_block
-    (title "Diode Ladder Filter")
-    (date "2023-06-08")
-    (rev "v0.1")
+    (title "Neptune")
+    (date "2023-07-20")
+    (rev "v0")
     (company "Winterbloom")
     (comment 1 "Carson Walls")
-    (comment 2 "LICENSE TBD")
-    (comment 3 "TBD.wntr.dev")
+    (comment 2 "CERN-OHL-P v2")
+    (comment 3 "neptune.wntr.dev")
   )
 
   (lib_symbols
@@ -220,7 +220,7 @@
     )
     (instances
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a" (page "4"))
+        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a" (page "7"))
       )
     )
   )
@@ -237,7 +237,7 @@
     )
     (instances
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a" (page "7"))
+        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a" (page "2"))
       )
     )
   )
@@ -262,7 +262,7 @@
     )
     (instances
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a" (page "9"))
+        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a" (page "2"))
       )
     )
   )
@@ -299,7 +299,7 @@
     )
     (instances
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a" (page "2"))
+        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a" (page "4"))
       )
     )
   )

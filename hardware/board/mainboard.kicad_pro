@@ -3,12 +3,12 @@
     "3dviewports": [],
     "design_settings": {
       "defaults": {
-        "board_outline_line_width": 0.09999999999999999,
+        "board_outline_line_width": 0.5,
         "copper_line_width": 0.19999999999999998,
         "copper_text_italic": false,
-        "copper_text_size_h": 1.5,
-        "copper_text_size_v": 1.5,
-        "copper_text_thickness": 0.3,
+        "copper_text_size_h": 1.0,
+        "copper_text_size_v": 1.0,
+        "copper_text_thickness": 0.19999999999999998,
         "copper_text_upright": false,
         "courtyard_line_width": 0.049999999999999996,
         "dimension_precision": 4,
@@ -27,7 +27,7 @@
         "fab_text_size_v": 1.0,
         "fab_text_thickness": 0.15,
         "fab_text_upright": false,
-        "other_line_width": 0.15,
+        "other_line_width": 0.09999999999999999,
         "other_text_italic": false,
         "other_text_size_h": 1.0,
         "other_text_size_v": 1.0,
@@ -38,17 +38,23 @@
           "height": 1.524,
           "width": 1.524
         },
-        "silk_line_width": 0.15,
+        "silk_line_width": 0.12,
         "silk_text_italic": false,
-        "silk_text_size_h": 1.0,
-        "silk_text_size_v": 1.0,
+        "silk_text_size_h": 0.7,
+        "silk_text_size_v": 0.7,
         "silk_text_thickness": 0.15,
         "silk_text_upright": false,
         "zones": {
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -66,7 +72,7 @@
         "duplicate_footprints": "warning",
         "extra_footprint": "warning",
         "footprint": "error",
-        "footprint_type_mismatch": "ignore",
+        "footprint_type_mismatch": "error",
         "hole_clearance": "error",
         "hole_near_hole": "error",
         "invalid_outline": "error",
@@ -82,12 +88,12 @@
         "missing_footprint": "warning",
         "net_conflict": "warning",
         "npth_inside_courtyard": "ignore",
-        "padstack": "warning",
+        "padstack": "error",
         "pth_inside_courtyard": "ignore",
         "shorting_items": "error",
         "silk_edge_clearance": "warning",
-        "silk_over_copper": "warning",
-        "silk_overlap": "warning",
+        "silk_over_copper": "ignore",
+        "silk_overlap": "ignore",
         "skew_out_of_range": "error",
         "solder_mask_bridge": "error",
         "starved_thermal": "error",
@@ -105,20 +111,20 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.18,
         "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.0,
+        "min_copper_edge_clearance": 0.25,
         "min_hole_clearance": 0.25,
-        "min_hole_to_hole": 0.25,
-        "min_microvia_diameter": 0.19999999999999998,
-        "min_microvia_drill": 0.09999999999999999,
+        "min_hole_to_hole": 0.5,
+        "min_microvia_diameter": 0.5,
+        "min_microvia_drill": 0.3,
         "min_resolved_spokes": 2,
         "min_silk_clearance": 0.0,
-        "min_text_height": 0.7999999999999999,
+        "min_text_height": 0.7,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.0,
-        "min_via_annular_width": 0.09999999999999999,
+        "min_track_width": 0.16,
+        "min_via_annular_width": 0.15,
         "min_via_diameter": 0.5,
         "solder_mask_clearance": 0.0,
         "solder_mask_min_width": 0.0,
@@ -165,9 +171,39 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
-      "via_dimensions": [],
-      "zones_allow_external_fillets": false
+      "track_widths": [
+        0.0,
+        0.2,
+        0.25,
+        0.4,
+        0.5,
+        0.8,
+        1.0,
+        1.5
+      ],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        },
+        {
+          "diameter": 0.7,
+          "drill": 0.4
+        },
+        {
+          "diameter": 0.8,
+          "drill": 0.5
+        },
+        {
+          "diameter": 0.9,
+          "drill": 0.6
+        },
+        {
+          "diameter": 1.0,
+          "drill": 0.7
+        }
+      ],
+      "zones_allow_external_fillets": true
     },
     "layer_presets": [],
     "viewports": []
@@ -380,7 +416,7 @@
       "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
-      "simulation_model_issue": "error",
+      "simulation_model_issue": "ignore",
       "unannotated": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
@@ -409,8 +445,8 @@
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.25,
-        "via_diameter": 0.8,
+        "track_width": 0.2,
+        "via_diameter": 0.7,
         "via_drill": 0.4,
         "wire_width": 6
       }
@@ -431,7 +467,7 @@
       "step": "",
       "vrml": ""
     },
-    "page_layout_descr_file": ""
+    "page_layout_descr_file": "../winterbloom.kicad_wks"
   },
   "schematic": {
     "annotate_start_num": 0,
@@ -473,16 +509,20 @@
       ""
     ],
     [
-      "3b1fa3f2-493c-449c-a2d6-10ea677680a0",
-      "Filter Core"
+      "2fb572ad-24ea-4cbe-ad52-b6fc76c2d017",
+      "Power"
+    ],
+    [
+      "3a92f97b-4bc8-4105-8c8c-23425d8f2338",
+      "Input Drivers"
     ],
     [
       "193c5b93-4c44-4f6f-9ef0-5f8993e4582d",
       "Cutoff CV Driver"
     ],
     [
-      "2f882567-d4bc-4d02-ab1f-fc30e1722a04",
-      "Output VCA"
+      "3b1fa3f2-493c-449c-a2d6-10ea677680a0",
+      "Filter Core"
     ],
     [
       "48d891c0-35ba-4c8e-a930-c990a10298eb",
@@ -493,16 +533,12 @@
       "Instability VCA"
     ],
     [
-      "2fb572ad-24ea-4cbe-ad52-b6fc76c2d017",
-      "Power"
+      "2f882567-d4bc-4d02-ab1f-fc30e1722a04",
+      "Output VCA"
     ],
     [
       "e3d5295b-e037-4c01-a5ad-25ec0ca0bdb3",
       "LED Drivers"
-    ],
-    [
-      "3a92f97b-4bc8-4105-8c8c-23425d8f2338",
-      "Input Drivers"
     ]
   ],
   "text_variables": {}

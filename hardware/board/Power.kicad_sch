@@ -5,13 +5,13 @@
   (paper "USLetter")
 
   (title_block
-    (title "Diode Ladder Filter")
-    (date "2023-06-08")
-    (rev "v0.1")
+    (title "Neptune")
+    (date "2023-07-20")
+    (rev "v0")
     (company "Winterbloom")
     (comment 1 "Carson Walls")
-    (comment 2 "LICENSE TBD")
-    (comment 3 "TBD.wntr.dev")
+    (comment 2 "CERN-OHL-P v2")
+    (comment 3 "neptune.wntr.dev")
   )
 
   (lib_symbols
@@ -392,7 +392,7 @@
       (property "Datasheet" "" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_keywords" "power-flag" (at 0 0 0)
+      (property "ki_keywords" "global power" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "ki_description" "Power symbol creates a global label with name \"+12V\"" (at 0 0 0)
@@ -444,7 +444,7 @@
       (property "Datasheet" "" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_keywords" "power-flag" (at 0 0 0)
+      (property "ki_keywords" "global power" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "ki_description" "Power symbol creates a global label with name \"-12V\"" (at 0 0 0)
@@ -484,7 +484,7 @@
       (property "Datasheet" "" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_keywords" "power-flag" (at 0 0 0)
+      (property "ki_keywords" "global power" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground" (at 0 0 0)
@@ -524,7 +524,7 @@
       (property "Datasheet" "~" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_keywords" "power-flag" (at 0 0 0)
+      (property "ki_keywords" "flag power" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "ki_description" "Special symbol for telling ERC where power comes from" (at 0 0 0)
@@ -558,7 +558,7 @@
       (property "Value" "Eurorack_Power" (at 0 -7.62 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Footprint" "winterbloom:Eurorack_Power_2x5_Shrouded" (at 0 11.43 0)
+      (property "Footprint" "winterbloom:Eurorack_Power_2x5_Shrouded_Lock" (at 0 11.43 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "Datasheet" "https://static6.arrow.com/aropdfconversion/1507f1621f4e67855dd466ebb3ac550d52564a9d/32302-sxx1.pdf" (at 0.635 -13.335 0)
@@ -1335,7 +1335,7 @@
           (reference "U?") (unit 5)
         )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "U?") (unit 5)
+          (reference "U2") (unit 5)
         )
       )
       (project "VCA"
@@ -1364,20 +1364,14 @@
     (property "Datasheet" "~" (at 80.01 81.915 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "GRM21BR61E106KA73K" (at 80.01 81.915 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "unit cost" "" (at 80.01 81.915 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Notes" "0805, 25V+, 10%, Bulk cap" (at 80.01 81.915 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "smd kit" "1" (at 80.01 81.915 0)
+    (property "Notes" "Bulk cap" (at 80.01 81.915 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Rating" "25V/10%" (at 83.185 85.0963 0)
       (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "MPN" "GRM21BR61E106KA73K" (at 80.01 81.915 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 79465448-5444-46be-932d-6b82943d0ee0))
     (pin "2" (uuid a607011a-d055-47b1-bbac-9c726214f8c1))
@@ -1389,7 +1383,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "C?") (unit 1)
+          (reference "C201") (unit 1)
         )
       )
     )
@@ -1410,20 +1404,14 @@
     (property "Datasheet" "http://www.vishay.com/docs/88525/1n5817.pdf" (at 70.485 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "PMEG2005EGWX" (at 70.485 76.2 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "unit cost" "" (at 70.485 76.2 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Notes" "Any PMEGxxxxEGW part, 500mA If" (at 70.485 76.2 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "smd kit" "1" (at 70.485 76.2 0)
+    (property "Notes" "Power diode, any PMEGxxxxEGW part, 500mA If" (at 70.485 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Rating" "500mA" (at 70.1675 85.09 0)
       (effects (font (size 1.27 1.27)))
+    )
+    (property "MPN" "PMEG2005EGWX" (at 70.485 76.2 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 03e7a84f-084a-4a69-9c84-ea00ced6d6af))
     (pin "2" (uuid bd304ab6-bf7e-4082-98e0-48ab0830962b))
@@ -1435,7 +1423,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "D?") (unit 1)
+          (reference "D202") (unit 1)
         )
       )
     )
@@ -1456,20 +1444,14 @@
     (property "Datasheet" "~" (at 104.775 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "C1608X7R1E104K080AA" (at 104.775 149.86 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "unit cost" "" (at 104.775 149.86 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Notes" "0603, 25V+, 10%, Bypass cap" (at 104.775 149.86 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "smd kit" "1" (at 104.775 149.86 0)
+    (property "Notes" "Bypass cap" (at 104.775 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Rating" "25V/10%" (at 108.585 152.4 0)
       (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "MPN" "C1608X7R1E104K080AA" (at 104.775 149.86 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid a768b634-a0bd-42b9-b3f3-25a460bb662a))
     (pin "2" (uuid 4534cf1d-fd68-40f2-93d2-ee3b873ffbd0))
@@ -1481,7 +1463,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "C?") (unit 1)
+          (reference "C213") (unit 1)
         )
       )
       (project "VCA"
@@ -1501,7 +1483,7 @@
     (property "Reference" "U?" (at 184.785 97.155 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "TL431DBZ" (at 184.785 99.695 90)
+    (property "Value" "TL431A" (at 184.785 99.695 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 185.42 97.79 0)
@@ -1510,7 +1492,10 @@
     (property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl431.pdf" (at 181.61 97.79 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
-    (property "LCSC" "C3113" (at 181.61 97.79 0)
+    (property "MPN" "TL431BSA-7, TL431AQDBZR,215; " (at 181.61 97.79 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Rating" "1%" (at 181.61 97.79 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid bd6ec036-32b4-4dd7-a3b9-efd32680a155))
@@ -1524,7 +1509,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "U?") (unit 1)
+          (reference "U201") (unit 1)
         )
       )
       (project "VCA"
@@ -1553,20 +1538,14 @@
     (property "Datasheet" "~" (at 139.065 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "C1608X7R1E104K080AA" (at 139.065 149.86 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "unit cost" "" (at 139.065 149.86 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Notes" "0603, 25V+, 10%, Bypass cap" (at 139.065 149.86 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "smd kit" "1" (at 139.065 149.86 0)
+    (property "Notes" "Bypass cap" (at 139.065 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Rating" "25V/10%" (at 142.875 152.4 0)
       (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "MPN" "C1608X7R1E104K080AA" (at 139.065 149.86 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 20155e37-9f98-4941-8cb8-5cbbc43c0270))
     (pin "2" (uuid 2f42af66-a3e6-40f1-a68d-9ac3d3f08ae5))
@@ -1578,7 +1557,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "C?") (unit 1)
+          (reference "C217") (unit 1)
         )
       )
       (project "VCA"
@@ -1616,7 +1595,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0206") (unit 1)
         )
       )
       (project "VCA"
@@ -1645,13 +1624,7 @@
     (property "Datasheet" "~" (at 215.9 95.25 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "" (at 215.9 95.25 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
     (property "Notes" "" (at 215.9 95.25 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "smd kit" "1" (at 215.9 95.25 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Rating" "100mW/1%" (at 218.44 97.79 0)
@@ -1667,7 +1640,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "R?") (unit 1)
+          (reference "R203") (unit 1)
         )
       )
       (project "VCA"
@@ -1705,7 +1678,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0224") (unit 1)
         )
       )
       (project "VCA"
@@ -1743,7 +1716,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0220") (unit 1)
         )
       )
       (project "VCA"
@@ -1772,20 +1745,14 @@
     (property "Datasheet" "~" (at 94.615 81.915 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "GRM21BR61E106KA73K" (at 94.615 81.915 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "unit cost" "" (at 94.615 81.915 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Notes" "0805, 25V+, 10%, Bulk cap" (at 94.615 81.915 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "smd kit" "1" (at 94.615 81.915 0)
+    (property "Notes" "Bulk cap" (at 94.615 81.915 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Rating" "25V/10%" (at 97.79 85.0963 0)
       (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "MPN" "GRM21BR61E106KA73K" (at 94.615 81.915 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 28201e62-15ba-4565-8b5d-d598a91239a3))
     (pin "2" (uuid df5a19b5-6619-4e4b-a3bc-b82f0e2e4a50))
@@ -1797,7 +1764,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "C?") (unit 1)
+          (reference "C202") (unit 1)
         )
       )
     )
@@ -1818,20 +1785,14 @@
     (property "Datasheet" "~" (at 52.705 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "C1608X7R1E104K080AA" (at 52.705 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "unit cost" "" (at 52.705 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Notes" "0603, 25V+, 10%, Bypass cap" (at 52.705 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "smd kit" "1" (at 52.705 119.38 0)
+    (property "Notes" "Bypass cap" (at 52.705 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Rating" "25V/10%" (at 56.515 121.92 0)
       (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "MPN" "C1608X7R1E104K080AA" (at 52.705 119.38 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 46ae112a-e791-4515-a543-8ecdbc305dc8))
     (pin "2" (uuid fffe8479-ac52-4a85-a4ad-c75dd8b609d2))
@@ -1843,7 +1804,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "C?") (unit 1)
+          (reference "C206") (unit 1)
         )
       )
       (project "VCA"
@@ -1872,20 +1833,14 @@
     (property "Datasheet" "~" (at 88.265 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "C1608X7R1E104K080AA" (at 88.265 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "unit cost" "" (at 88.265 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Notes" "0603, 25V+, 10%, Bypass cap" (at 88.265 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "smd kit" "1" (at 88.265 119.38 0)
+    (property "Notes" "Bypass cap" (at 88.265 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Rating" "25V/10%" (at 92.075 121.92 0)
       (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "MPN" "C1608X7R1E104K080AA" (at 88.265 119.38 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 56bfd0de-bc10-432f-b637-cf013e1e54c7))
     (pin "2" (uuid 1c7aeafb-fa11-42b4-8193-282c69c73b90))
@@ -1897,7 +1852,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "C?") (unit 1)
+          (reference "C210") (unit 1)
         )
       )
       (project "VCA"
@@ -1960,7 +1915,7 @@
           (reference "U?") (unit 1)
         )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "U?") (unit 1)
+          (reference "U1") (unit 1)
         )
       )
     )
@@ -1981,20 +1936,14 @@
     (property "Datasheet" "~" (at 55.88 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "742792664" (at 55.88 76.2 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "unit cost" "" (at 55.88 76.2 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
     (property "Notes" "" (at 55.88 76.2 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "smd kit" "1" (at 55.88 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Rating" "300mA" (at 55.9181 85.09 90)
       (effects (font (size 1.27 1.27)))
+    )
+    (property "MPN" "742792664" (at 55.88 76.2 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid d8beb670-34a6-4113-b2fa-5fe9f0750867))
     (pin "2" (uuid be805a11-b5f0-47bf-bfdc-93dc2eea4e87))
@@ -2006,7 +1955,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "FB?") (unit 1)
+          (reference "FB202") (unit 1)
         )
       )
     )
@@ -2063,7 +2012,7 @@
           (reference "U?") (unit 5)
         )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "U?") (unit 5)
+          (reference "U3") (unit 5)
         )
       )
       (project "VCA"
@@ -2101,7 +2050,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "#FLG?") (unit 1)
+          (reference "#FLG0201") (unit 1)
         )
       )
     )
@@ -2156,7 +2105,7 @@
           (reference "U?") (unit 2)
         )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "U?") (unit 2)
+          (reference "U1") (unit 2)
         )
       )
     )
@@ -2186,7 +2135,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0216") (unit 1)
         )
       )
       (project "VCA"
@@ -2251,7 +2200,7 @@
           (reference "U?") (unit 5)
         )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "U?") (unit 5)
+          (reference "U5") (unit 5)
         )
       )
       (project "VCA"
@@ -2316,7 +2265,7 @@
           (reference "U?") (unit 5)
         )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "U?") (unit 5)
+          (reference "U6") (unit 5)
         )
       )
       (project "VCA"
@@ -2333,13 +2282,13 @@
   (symbol (lib_id "Connector:TestPoint") (at 234.95 110.49 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 38bab294-8396-42b3-b20a-e58e0c3b4a63)
-    (property "Reference" "TP?" (at 241.3 109.22 90)
+    (property "Reference" "TP203" (at 241.3 109.22 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "~" (at 241.3 111.76 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 234.95 115.57 0)
+    (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm" (at 234.95 115.57 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 234.95 115.57 0)
@@ -2352,7 +2301,7 @@
     (instances
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "TP?") (unit 1)
+          (reference "TP203") (unit 1)
         )
       )
     )
@@ -2382,7 +2331,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0222") (unit 1)
         )
       )
       (project "VCA"
@@ -2420,7 +2369,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0218") (unit 1)
         )
       )
     )
@@ -2450,7 +2399,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0207") (unit 1)
         )
       )
       (project "VCA"
@@ -2488,7 +2437,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0201") (unit 1)
         )
       )
       (project "VCA"
@@ -2517,20 +2466,14 @@
     (property "Datasheet" "~" (at 52.705 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "C1608X7R1E104K080AA" (at 52.705 149.86 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "unit cost" "" (at 52.705 149.86 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Notes" "0603, 25V+, 10%, Bypass cap" (at 52.705 149.86 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "smd kit" "1" (at 52.705 149.86 0)
+    (property "Notes" "Bypass cap" (at 52.705 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Rating" "25V/10%" (at 56.515 152.4 0)
       (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "MPN" "C1608X7R1E104K080AA" (at 52.705 149.86 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid fb34b216-1b62-4eca-bff9-c569cb04842b))
     (pin "2" (uuid c3776a48-40b2-41ed-ac2c-b205ae63d21c))
@@ -2542,7 +2485,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "C?") (unit 1)
+          (reference "C207") (unit 1)
         )
       )
       (project "VCA"
@@ -2580,7 +2523,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0219") (unit 1)
         )
       )
     )
@@ -2610,7 +2553,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0210") (unit 1)
         )
       )
       (project "VCA"
@@ -2639,20 +2582,14 @@
     (property "Datasheet" "http://www.vishay.com/docs/88525/1n5817.pdf" (at 70.485 72.39 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "PMEG2005EGWX" (at 70.485 72.39 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "unit cost" "" (at 70.485 72.39 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Notes" "Any PMEGxxxxEGW part, 500mA If" (at 70.485 72.39 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "smd kit" "1" (at 70.485 72.39 0)
+    (property "Notes" "Power diode, any PMEGxxxxEGW part, 500mA If" (at 70.485 72.39 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Rating" "500mA" (at 70.8025 69.85 0)
       (effects (font (size 1.27 1.27)))
+    )
+    (property "MPN" "PMEG2005EGWX" (at 70.485 72.39 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 02264ec6-b74e-40c4-9526-c15218bbb1bb))
     (pin "2" (uuid 7ca60f19-b55d-414c-9799-ae5403dc1685))
@@ -2664,7 +2601,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "D?") (unit 1)
+          (reference "D201") (unit 1)
         )
       )
     )
@@ -2685,13 +2622,7 @@
     (property "Datasheet" "~" (at 224.79 110.49 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "" (at 224.79 110.49 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
     (property "Notes" "" (at 224.79 110.49 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "smd kit" "1" (at 224.79 110.49 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Rating" "100mW/1%" (at 224.79 107.95 90)
@@ -2707,7 +2638,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "R?") (unit 1)
+          (reference "R206") (unit 1)
         )
       )
       (project "VCA"
@@ -2736,20 +2667,14 @@
     (property "Datasheet" "~" (at 139.065 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "C1608X7R1E104K080AA" (at 139.065 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "unit cost" "" (at 139.065 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Notes" "0603, 25V+, 10%, Bypass cap" (at 139.065 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "smd kit" "1" (at 139.065 119.38 0)
+    (property "Notes" "Bypass cap" (at 139.065 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Rating" "25V/10%" (at 142.875 121.92 0)
       (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "MPN" "C1608X7R1E104K080AA" (at 139.065 119.38 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 4fd45452-d5eb-4f70-b2af-212a74fc1071))
     (pin "2" (uuid aada8155-133c-44d8-a768-3f7dfafa1786))
@@ -2761,7 +2686,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "C?") (unit 1)
+          (reference "C216") (unit 1)
         )
       )
       (project "VCA"
@@ -2799,7 +2724,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0211") (unit 1)
         )
       )
     )
@@ -2820,20 +2745,14 @@
     (property "Datasheet" "~" (at 123.825 81.915 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "GRM21BR61E106KA73K" (at 123.825 81.915 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "unit cost" "" (at 123.825 81.915 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Notes" "0805, 25V+, 10%, Bulk cap" (at 123.825 81.915 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "smd kit" "1" (at 123.825 81.915 0)
+    (property "Notes" "Bulk cap" (at 123.825 81.915 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Rating" "25V/10%" (at 127 85.0963 0)
       (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "MPN" "GRM21BR61E106KA73K" (at 123.825 81.915 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid b6173971-aa6f-4e39-9581-b0e919ff3e58))
     (pin "2" (uuid 1590d6d3-6736-4fc8-9f42-b76fd666e847))
@@ -2845,7 +2764,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "C?") (unit 1)
+          (reference "C204") (unit 1)
         )
       )
     )
@@ -2875,7 +2794,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0214") (unit 1)
         )
       )
     )
@@ -2896,20 +2815,14 @@
     (property "Datasheet" "~" (at 122.555 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "C1608X7R1E104K080AA" (at 122.555 149.86 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "unit cost" "" (at 122.555 149.86 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Notes" "0603, 25V+, 10%, Bypass cap" (at 122.555 149.86 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "smd kit" "1" (at 122.555 149.86 0)
+    (property "Notes" "Bypass cap" (at 122.555 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Rating" "25V/10%" (at 126.365 152.4 0)
       (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "MPN" "C1608X7R1E104K080AA" (at 122.555 149.86 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 110fe2b3-a906-4220-89dd-ac1eda8e6c7f))
     (pin "2" (uuid f295a82f-33a5-47c1-9731-dfbd7be20af3))
@@ -2921,7 +2834,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "C?") (unit 1)
+          (reference "C215") (unit 1)
         )
       )
       (project "VCA"
@@ -2950,13 +2863,7 @@
     (property "Datasheet" "~" (at 176.53 81.28 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "" (at 176.53 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
     (property "Notes" "" (at 176.53 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "smd kit" "1" (at 176.53 81.28 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Rating" "100mW/5%" (at 179.07 84.455 0)
@@ -2972,7 +2879,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "R?") (unit 1)
+          (reference "R201") (unit 1)
         )
       )
       (project "VCA"
@@ -3001,20 +2908,14 @@
     (property "Datasheet" "~" (at 88.265 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "C1608X7R1E104K080AA" (at 88.265 149.86 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "unit cost" "" (at 88.265 149.86 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Notes" "0603, 25V+, 10%, Bypass cap" (at 88.265 149.86 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "smd kit" "1" (at 88.265 149.86 0)
+    (property "Notes" "Bypass cap" (at 88.265 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Rating" "25V/10%" (at 92.075 152.4 0)
       (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "MPN" "C1608X7R1E104K080AA" (at 88.265 149.86 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid c8547221-b227-40fa-8dec-732bf5fda948))
     (pin "2" (uuid de45640f-b6b2-468d-a0af-f4c596c5998e))
@@ -3026,7 +2927,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "C?") (unit 1)
+          (reference "C211") (unit 1)
         )
       )
       (project "VCA"
@@ -3064,7 +2965,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0217") (unit 1)
         )
       )
     )
@@ -3094,7 +2995,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0225") (unit 1)
         )
       )
       (project "VCA"
@@ -3123,20 +3024,14 @@
     (property "Datasheet" "~" (at 70.485 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "C1608X7R1E104K080AA" (at 70.485 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "unit cost" "" (at 70.485 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Notes" "0603, 25V+, 10%, Bypass cap" (at 70.485 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "smd kit" "1" (at 70.485 119.38 0)
+    (property "Notes" "Bypass cap" (at 70.485 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Rating" "25V/10%" (at 74.295 121.92 0)
       (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "MPN" "C1608X7R1E104K080AA" (at 70.485 119.38 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 6e197471-0cc3-4f8d-bb13-3f262af3b49e))
     (pin "2" (uuid da1da26b-1c8f-4ca5-bb0a-4c212443b378))
@@ -3148,7 +3043,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "C?") (unit 1)
+          (reference "C208") (unit 1)
         )
       )
       (project "VCA"
@@ -3177,20 +3072,14 @@
     (property "Datasheet" "~" (at 109.22 81.915 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "GRM21BR61E106KA73K" (at 109.22 81.915 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "unit cost" "" (at 109.22 81.915 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Notes" "0805, 25V+, 10%, Bulk cap" (at 109.22 81.915 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "smd kit" "1" (at 109.22 81.915 0)
+    (property "Notes" "Bulk cap" (at 109.22 81.915 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Rating" "25V/10%" (at 112.395 85.0963 0)
       (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "MPN" "GRM21BR61E106KA73K" (at 109.22 81.915 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid e70f35d3-27cb-410a-bd1f-2b102a146a34))
     (pin "2" (uuid d6ff9383-ddc5-46aa-877f-fb689bf82afd))
@@ -3202,7 +3091,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "C?") (unit 1)
+          (reference "C203") (unit 1)
         )
       )
     )
@@ -3232,7 +3121,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0204") (unit 1)
         )
       )
       (project "VCA"
@@ -3270,7 +3159,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0213") (unit 1)
         )
       )
       (project "VCA"
@@ -3299,13 +3188,7 @@
     (property "Datasheet" "~" (at 209.55 74.93 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "" (at 209.55 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
     (property "Notes" "" (at 209.55 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "smd kit" "1" (at 209.55 74.93 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Rating" "100mW/1%" (at 209.55 72.39 90)
@@ -3321,7 +3204,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "R?") (unit 1)
+          (reference "R202") (unit 1)
         )
       )
       (project "VCA"
@@ -3350,9 +3233,6 @@
     (property "Datasheet" "https://static6.arrow.com/aropdfconversion/1507f1621f4e67855dd466ebb3ac550d52564a9d/32302-sxx1.pdf" (at 40.005 89.535 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "302-S101" (at 39.37 62.23 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
     (property "MPN" "302-S101" (at 39.37 62.23 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -3374,7 +3254,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "J?") (unit 1)
+          (reference "J201") (unit 1)
         )
       )
     )
@@ -3395,20 +3275,14 @@
     (property "Datasheet" "~" (at 104.775 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "C1608X7R1E104K080AA" (at 104.775 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "unit cost" "" (at 104.775 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Notes" "0603, 25V+, 10%, Bypass cap" (at 104.775 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "smd kit" "1" (at 104.775 119.38 0)
+    (property "Notes" "Bypass cap" (at 104.775 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Rating" "25V/10%" (at 108.585 121.92 0)
       (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "MPN" "C1608X7R1E104K080AA" (at 104.775 119.38 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 6a44d7f7-fb76-40cb-93a6-e4643f78d60a))
     (pin "2" (uuid ee153362-5dce-4ee6-95a3-df42a9a03f3f))
@@ -3420,7 +3294,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "C?") (unit 1)
+          (reference "C212") (unit 1)
         )
       )
       (project "VCA"
@@ -3449,20 +3323,14 @@
     (property "Datasheet" "~" (at 70.485 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "C1608X7R1E104K080AA" (at 70.485 149.86 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "unit cost" "" (at 70.485 149.86 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Notes" "0603, 25V+, 10%, Bypass cap" (at 70.485 149.86 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "smd kit" "1" (at 70.485 149.86 0)
+    (property "Notes" "Bypass cap" (at 70.485 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Rating" "25V/10%" (at 74.295 152.4 0)
       (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "MPN" "C1608X7R1E104K080AA" (at 70.485 149.86 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 4c97dd3a-fa5d-476c-ac66-e121d69641a4))
     (pin "2" (uuid 95e2eaf4-04fb-4133-8977-b0384bea7ca9))
@@ -3474,7 +3342,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "C?") (unit 1)
+          (reference "C209") (unit 1)
         )
       )
       (project "VCA"
@@ -3503,13 +3371,7 @@
     (property "Datasheet" "~" (at 223.52 74.93 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "" (at 223.52 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
     (property "Notes" "" (at 223.52 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "smd kit" "1" (at 223.52 74.93 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Rating" "100mW/1%" (at 223.52 72.39 90)
@@ -3525,7 +3387,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "R?") (unit 1)
+          (reference "R205") (unit 1)
         )
       )
       (project "VCA"
@@ -3563,7 +3425,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0223") (unit 1)
         )
       )
       (project "VCA"
@@ -3601,7 +3463,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0212") (unit 1)
         )
       )
       (project "VCA"
@@ -3639,7 +3501,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "#FLG?") (unit 1)
+          (reference "#FLG0202") (unit 1)
         )
       )
     )
@@ -3660,20 +3522,14 @@
     (property "Datasheet" "~" (at 55.88 72.39 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "742792664" (at 55.88 72.39 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "unit cost" "" (at 55.88 72.39 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
     (property "Notes" "" (at 55.88 72.39 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "smd kit" "1" (at 55.88 72.39 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Rating" "300mA" (at 55.9181 69.85 90)
       (effects (font (size 1.27 1.27)))
+    )
+    (property "MPN" "742792664" (at 55.88 72.39 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 77bd74c9-a1bc-4f82-b186-adfa0f1e5f62))
     (pin "2" (uuid ad9790f4-9913-4e06-9959-ab72a9d8037a))
@@ -3685,7 +3541,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "FB?") (unit 1)
+          (reference "FB201") (unit 1)
         )
       )
     )
@@ -3742,7 +3598,7 @@
           (reference "U?") (unit 5)
         )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "U?") (unit 5)
+          (reference "U4") (unit 5)
         )
       )
       (project "VCA"
@@ -3759,13 +3615,13 @@
   (symbol (lib_id "Connector:TestPoint") (at 234.95 74.93 270) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b5df3ef7-4eab-4928-8ed6-739b757760ba)
-    (property "Reference" "TP?" (at 241.3 73.66 90)
+    (property "Reference" "TP202" (at 241.3 73.66 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "~" (at 241.3 76.2 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 234.95 69.85 0)
+    (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm" (at 234.95 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 234.95 69.85 0)
@@ -3778,7 +3634,7 @@
     (instances
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "TP?") (unit 1)
+          (reference "TP202") (unit 1)
         )
       )
     )
@@ -3799,20 +3655,14 @@
     (property "Datasheet" "~" (at 176.53 102.87 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "C1608X7R1E104K080AA" (at 176.53 102.87 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "unit cost" "" (at 176.53 102.87 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Notes" "0603, 25V+, 10%, Bypass cap" (at 176.53 102.87 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "smd kit" "1" (at 176.53 102.87 0)
+    (property "Notes" "Bypass cap" (at 176.53 102.87 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Rating" "25V/10%" (at 173.99 106.0386 0)
       (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "MPN" "C1608X7R1E104K080AA" (at 176.53 102.87 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 5977090f-eb8d-4d03-845d-5f7ab8b99df0))
     (pin "2" (uuid ce986d73-18df-4532-bdec-0550dcb1488e))
@@ -3824,7 +3674,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "C?") (unit 1)
+          (reference "C205") (unit 1)
         )
       )
       (project "VCA"
@@ -3889,7 +3739,7 @@
           (reference "U?") (unit 5)
         )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "U?") (unit 5)
+          (reference "U1") (unit 5)
         )
       )
       (project "VCA"
@@ -3906,13 +3756,13 @@
   (symbol (lib_id "Connector:TestPoint") (at 192.405 87.63 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c8986379-e764-4759-b84b-ceee4018fcf7)
-    (property "Reference" "TP?" (at 194.945 91.567 0)
+    (property "Reference" "TP201" (at 194.945 91.567 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "~" (at 194.945 89.027 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 197.485 87.63 0)
+    (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm" (at 197.485 87.63 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 197.485 87.63 0)
@@ -3925,7 +3775,7 @@
     (instances
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "TP?") (unit 1)
+          (reference "TP201") (unit 1)
         )
       )
     )
@@ -3955,7 +3805,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0215") (unit 1)
         )
       )
       (project "VCA"
@@ -3993,7 +3843,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0209") (unit 1)
         )
       )
       (project "VCA"
@@ -4031,7 +3881,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0221") (unit 1)
         )
       )
       (project "VCA"
@@ -4060,20 +3910,14 @@
     (property "Datasheet" "~" (at 122.555 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "C1608X7R1E104K080AA" (at 122.555 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "unit cost" "" (at 122.555 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Notes" "0603, 25V+, 10%, Bypass cap" (at 122.555 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "smd kit" "1" (at 122.555 119.38 0)
+    (property "Notes" "Bypass cap" (at 122.555 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Rating" "25V/10%" (at 126.365 121.92 0)
       (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "MPN" "C1608X7R1E104K080AA" (at 122.555 119.38 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 5990aae7-b945-4b4f-a6cb-05c3aff6f2ca))
     (pin "2" (uuid 2003f21e-09b8-480e-9bd0-56f89442bbe0))
@@ -4085,7 +3929,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "C?") (unit 1)
+          (reference "C214") (unit 1)
         )
       )
       (project "VCA"
@@ -4123,7 +3967,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0203") (unit 1)
         )
       )
     )
@@ -4153,7 +3997,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0202") (unit 1)
         )
       )
       (project "VCA"
@@ -4191,7 +4035,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0205") (unit 1)
         )
       )
       (project "VCA"
@@ -4229,7 +4073,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0208") (unit 1)
         )
       )
     )
@@ -4250,13 +4094,7 @@
     (property "Datasheet" "~" (at 215.9 104.14 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "" (at 215.9 104.14 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
     (property "Notes" "" (at 215.9 104.14 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "smd kit" "1" (at 215.9 104.14 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Rating" "100mW/1%" (at 213.36 107.315 0)
@@ -4272,7 +4110,7 @@
       )
       (project "mainboard"
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "R?") (unit 1)
+          (reference "R204") (unit 1)
         )
       )
       (project "VCA"
