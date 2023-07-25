@@ -1336,6 +1336,77 @@
     )
   )
 
+  (symbol (lib_id "winterbloom:TL074") (at 134.62 115.57 0) (mirror x) (unit 3)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 76e1babc-5560-4c3c-98cf-c8575f2fc78c)
+    (property "Reference" "U?" (at 136.525 119.38 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "TL074" (at 133.35 115.57 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" (at 134.62 125.73 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "https://www.ti.com/lit/ds/symlink/tl071.pdf" (at 135.89 120.65 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "MPN" "TL074CPW" (at 134.62 123.19 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 9201f1b3-3ce4-4c29-8050-717ba2f4948b))
+    (pin "2" (uuid bd3a1f95-9c94-4638-bb30-97c5d0455495))
+    (pin "3" (uuid 97c496f9-045a-465d-a2d7-dd87495126f6))
+    (pin "5" (uuid 14ad409a-431d-4d4d-bac2-41749afec32d))
+    (pin "6" (uuid 9ef8e139-bca0-429a-a32c-f8ce3472b11a))
+    (pin "7" (uuid 565d9811-6722-4706-a6c0-81bc7b20c637))
+    (pin "10" (uuid ea4ac509-d81a-4384-9287-1521db6e478b))
+    (pin "8" (uuid ecabb1c5-be9a-41f8-a009-b6b06b2540de))
+    (pin "9" (uuid 08c5b532-619e-4f5b-90a9-6116ce0072a5))
+    (pin "12" (uuid 5ad827aa-55c8-41ad-b7f3-e8ea4c922dce))
+    (pin "13" (uuid 26de4102-fa03-447d-a54e-76265690c039))
+    (pin "14" (uuid 516bda25-39f9-4fd4-bd65-c1c787c05493))
+    (pin "11" (uuid 1a2ddc08-3af7-49f8-aeeb-65298b3fc63c))
+    (pin "4" (uuid 34bf47a1-0aa1-4924-8d51-6947be4f5978))
+    (instances
+      (project "VCA_0.3"
+        (path "/0739a502-7fa1-4e85-8cae-604fd21c9156"
+          (reference "U?") (unit 3)
+        )
+      )
+      (project "mainboard"
+        (path "/6e47ee4f-b36d-4cb2-9b20-31f755e664f7/00000000-0000-0000-0000-00005f0e55e2"
+          (reference "U?") (unit 3)
+        )
+        (path "/6e47ee4f-b36d-4cb2-9b20-31f755e664f7/00000000-0000-0000-0000-00005f016ad7"
+          (reference "U?") (unit 2)
+        )
+      )
+      (project "mainboard"
+        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
+          (reference "U?") (unit 3)
+        )
+        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
+          (reference "U?") (unit 3)
+        )
+        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2f882567-d4bc-4d02-ab1f-fc30e1722a04"
+          (reference "U2") (unit 3)
+        )
+        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/193c5b93-4c44-4f6f-9ef0-5f8993e4582d"
+          (reference "U2") (unit 3)
+        )
+      )
+      (project "VCA"
+        (path "/de69ad6f-07bb-4f9c-962b-520f6532317d"
+          (reference "U?") (unit 3)
+        )
+        (path "/de69ad6f-07bb-4f9c-962b-520f6532317d/0f818280-e6cd-4382-a215-72bb59f50cc3"
+          (reference "U?") (unit 3)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "winterbloom:Eurorack_Pot") (at 167.64 133.35 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 78cde111-a82b-4d22-b906-901494ca7bbf)
@@ -1586,61 +1657,6 @@
         )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/193c5b93-4c44-4f6f-9ef0-5f8993e4582d"
           (reference "#PWR0407") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "winterbloom:TL074") (at 134.62 115.57 0) (mirror x) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid d1c457c2-f0b3-4ca0-96bc-f1b85f4b849b)
-    (property "Reference" "U?" (at 137.16 119.38 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "TL074" (at 133.35 115.57 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" (at 134.62 125.73 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "https://www.ti.com/lit/ds/symlink/tl071.pdf" (at 135.89 120.65 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "MPN" "TL074CPW" (at 134.62 123.19 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid eb9297bb-615e-43ee-b873-94d59d24f361))
-    (pin "2" (uuid 79412633-d0e9-45ec-878b-2e21578db911))
-    (pin "3" (uuid 5e0b8583-4d3f-4e36-b2b3-2cff3d58a31c))
-    (pin "5" (uuid b7f9eeb7-d613-464d-a374-d1ca21ec2837))
-    (pin "6" (uuid a7dc8dc3-77c7-4c8a-919a-0c2915ca2615))
-    (pin "7" (uuid facd57a7-2730-4b76-b26c-812749b61dc7))
-    (pin "10" (uuid 5a9ccd4c-3c58-4fce-ba67-666c83cf3cee))
-    (pin "8" (uuid ce88b514-e497-4a1f-871f-bee1dc9adb96))
-    (pin "9" (uuid 16b99960-e0c3-463c-83e8-9d0245506996))
-    (pin "12" (uuid 7c3aa02d-5310-4fae-8723-2d4f47142965))
-    (pin "13" (uuid a3827b8d-3137-498e-bdc6-d45b7b5a91aa))
-    (pin "14" (uuid 916ec026-a0b0-4f31-8efd-abeb21891153))
-    (pin "11" (uuid 39c9b7f8-5c06-40d9-a90b-296b3fbfc890))
-    (pin "4" (uuid 2c38956d-2dc8-4663-8dca-8222acc7a0f7))
-    (instances
-      (project "mainboard"
-        (path "/6e47ee4f-b36d-4cb2-9b20-31f755e664f7/00000000-0000-0000-0000-00005f0e55e2"
-          (reference "U?") (unit 1)
-        )
-        (path "/6e47ee4f-b36d-4cb2-9b20-31f755e664f7/00000000-0000-0000-0000-00005f016ad7"
-          (reference "U?") (unit 4)
-        )
-      )
-      (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "U?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
-          (reference "U?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/193c5b93-4c44-4f6f-9ef0-5f8993e4582d"
-          (reference "U2") (unit 1)
         )
       )
     )
