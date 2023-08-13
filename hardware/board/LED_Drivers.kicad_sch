@@ -1166,7 +1166,7 @@
     (uuid b5b4c6e6-7930-40ea-9dbb-0b0f822e62f4)
   )
 
-  (text "Red LED Indicates Self Oscillation" (at 87.63 153.67 0)
+  (text "Red LED Indicates\nSelf Oscillation" (at 120.65 154.94 0)
     (effects (font (size 2 2) (thickness 0.4) bold) (justify left bottom))
     (uuid 0670ee5c-2789-483f-b689-3d376eecf570)
   )

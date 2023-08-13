@@ -819,8 +819,8 @@
     (uuid f7345b05-243a-426a-a942-427eb6e663b6)
   )
 
-  (text "Mixes the various modulation sources for the Cutoff Frequency\n\nCV input: 5v Nominal Max\n\nCV Cutoff: ~15khz\n\nLED Max Brightness: 3.3mA\n\n"
-    (at 21.59 44.45 0)
+  (text "Mixes the various modulation sources for the Cutoff Frequency\n\nCV input: 5v Nominal Max\n\nCV Cutoff: ~15khz\n\n"
+    (at 22.225 40.005 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 13d569d7-ee2e-40b2-8db5-8cc2d52258ce)
   )

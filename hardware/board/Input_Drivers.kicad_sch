@@ -771,8 +771,8 @@
     (uuid f2869473-100d-4e77-96de-2c2c7f16816a)
   )
 
-  (text "Resistor going from pot wiper to ground can be adjusted to adjust\nthe pot curve, current value makes it a bit closer to audio taper, but not all the way there"
-    (at 19.05 55.88 0)
+  (text "Resistor going from pot wiper to ground can be adjusted to adjust the volume curve"
+    (at 19.05 52.705 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 1621eb91-7809-48ec-9be5-66a748799457)
   )
