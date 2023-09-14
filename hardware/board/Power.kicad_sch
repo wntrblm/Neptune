@@ -3176,7 +3176,7 @@
     (property "Value" "Power" (at 40.3225 36.195 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "winterbloom:Eurorack_Power_2x5_Shrouded_Lock" (at 40.005 32.385 0)
+    (property "Footprint" "winterbloom:Eurorack_Power_2x5_Shrouded_Lock_LongPads" (at 40.005 32.385 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://static6.arrow.com/aropdfconversion/1507f1621f4e67855dd466ebb3ac550d52564a9d/32302-sxx1.pdf" (at 40.64 57.15 0)
