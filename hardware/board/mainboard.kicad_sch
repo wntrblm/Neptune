@@ -136,9 +136,18 @@
     (uuid f47ff88d-48ff-4db8-9546-8758303c5cf5)
   )
 
+  (text "Proposed Changes" (at 71.12 -25.4 0)
+    (effects (font (size 5 5) (thickness 0.508) bold) (justify left bottom))
+    (uuid 44598b3d-c8d8-4c87-a47e-d38148d2f4c4)
+  )
   (text "Neptune" (at 17.78 25.4 0)
     (effects (font (size 5 5) (thickness 0.508) bold) (justify left bottom))
     (uuid 61406eb9-c665-4f15-97b1-a7e9c515e973)
+  )
+  (text "Add PNP Transistor and two resistors to make self oscillation LED come on sharply at self oscillation\n\nChange Resistors on Resonance CV to make them a bit brighter?\n\nMove diodes and add two resistors to FM1 led circuit to increase sensitivity\n\nChange FM1 Attenuverter to add a bit of deadzone (add two resistors)\n\nMake resonance VCA output higher voltage. (change output resistors and add two resistors as voltage divider)\n\n\n\n\n"
+    (at 72.39 6.35 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid de11e606-27bd-4e3e-8ab0-0fe3424c43e3)
   )
   (text "4 Pole Diode Ladder Filter\n\nInspired by the filter by Moritz Klein\n\n\n"
     (at 19.05 39.37 0)
