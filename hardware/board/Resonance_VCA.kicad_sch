@@ -1193,7 +1193,7 @@
     (effects (font (size 5 5) (thickness 0.508) bold) (justify left bottom))
     (uuid 64777721-fbcd-4fe9-8ea4-9a1a204c226c)
   )
-  (text "Controls the depth of the Resonance feedback circuit \n\nCV input: 5V Nominal Max\n\nSelf Resonance Gain Threshold: -8dB\n\nCV Cutoff: ~2.5khz\n\nMax Gain: -5.5dB\n\nMax Self Resonant Frequency: ~3kHz\n\n\n"
+  (text "Controls the depth of the Resonance feedback circuit \n\nCV input: 5V Nominal Max\n\nSelf Resonance Gain Threshold: -8dB\n\nCV Cutoff: ~2.5khz\n\nMax Gain: -5.5dB\n\nMax Self Resonant Frequency: ~16kHz\n\n\n"
     (at 20.32 55.245 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 9738fe07-ddc0-4b5e-8b31-7487f6d92334)
@@ -2559,6 +2559,54 @@
     )
   )
 
+  (symbol (lib_id "Device:C_Small") (at 218.44 85.09 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid b333f863-2407-4cd9-a603-63f31ad364b2)
+    (property "Reference" "C?" (at 218.4463 77.47 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "10p" (at 218.4463 80.01 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "winterbloom:C_0603_HandSolder" (at 218.44 85.09 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 218.44 85.09 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Notes" "" (at 218.44 85.09 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Rating" "25V/10%" (at 218.4463 82.55 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (pin "1" (uuid 4e354e41-2127-47b4-b7f2-01db70a32840))
+    (pin "2" (uuid d9c4e9b3-5488-4bc2-8276-bf6017a3b037))
+    (instances
+      (project "board"
+        (path "/55082cc1-c956-45a6-b2b5-3db02a6da9d0"
+          (reference "C?") (unit 1)
+        )
+      )
+      (project "mainboard"
+        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2f882567-d4bc-4d02-ab1f-fc30e1722a04"
+          (reference "C802") (unit 1)
+        )
+        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
+          (reference "C602") (unit 1)
+        )
+      )
+      (project "VCA"
+        (path "/de69ad6f-07bb-4f9c-962b-520f6532317d"
+          (reference "C?") (unit 1)
+        )
+        (path "/de69ad6f-07bb-4f9c-962b-520f6532317d/5e672b4f-6fd9-484e-977a-c1eaf1352b32"
+          (reference "C?") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:GND") (at 209.55 127 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c497940d-c741-4291-9d5d-b1c662a7fbcc)
@@ -2929,49 +2977,6 @@
         )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
           (reference "#PWR0603") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:C_Small") (at 218.44 85.09 270) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid eda05489-e948-4b4c-a155-a50812609a51)
-    (property "Reference" "C?" (at 218.4336 77.47 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "68p" (at 218.4336 80.01 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "winterbloom:C_0603_HandSolder" (at 218.44 85.09 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 218.44 85.09 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Notes" "" (at 218.44 85.09 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Rating" "25V/10%" (at 218.4336 82.55 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (pin "1" (uuid 5310886f-90ad-4d5b-8c0a-b1215dd4f069))
-    (pin "2" (uuid 75e170d9-8196-40f3-812d-5eee62d26cee))
-    (instances
-      (project "board"
-        (path "/55082cc1-c956-45a6-b2b5-3db02a6da9d0"
-          (reference "C?") (unit 1)
-        )
-      )
-      (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "C?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "C?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "C602") (unit 1)
         )
       )
     )

@@ -1,5 +1,13 @@
 Neptune Prototype Testing/changes
 
+Concerns:
+	Low impedance inputs:
+		LP in
+		HP in
+		FM1
+		FM2
+		All 10k to ground input impedance, might lead to loading effects with passive mults
+
 Test all inputs and outputs for +- 12v
 
 LP:
