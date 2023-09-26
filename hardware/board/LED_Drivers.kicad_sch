@@ -1409,7 +1409,7 @@
     (effects (font (size 2 2) (thickness 0.4) bold) (justify left bottom))
     (uuid cb890d7f-2ed4-4f6f-952f-806532d7b628)
   )
-  (text "All LEDs target max brightness ~3mA" (at 20.32 17.78 0)
+  (text "All LEDs target max brightness ~4-5mA" (at 20.32 17.78 0)
     (effects (font (size 2 2) (thickness 0.4) bold) (justify left bottom))
     (uuid db01a9d1-0d65-4a22-850b-5cbb43588aa1)
   )
