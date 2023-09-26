@@ -55,12 +55,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        "lib_footprint_issues|53950000|156749752|362b4501-73c6-4c4c-8ed4-9bb44c8977d8|00000000-0000-0000-0000-000000000000",
-        "lib_footprint_issues|79200000|135250000|231f4e55-90b7-431b-b500-4197efafb2f6|00000000-0000-0000-0000-000000000000",
-        "lib_footprint_issues|80702610|144717900|f0d4b112-6d4a-4dc5-ba48-0264674cf97c|00000000-0000-0000-0000-000000000000",
-        "lib_footprint_issues|82981950|54249400|d6e1d33c-57d9-4952-bdbc-10d62ad9b200|00000000-0000-0000-0000-000000000000"
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -85,7 +80,7 @@
         "item_on_disabled_layer": "error",
         "items_not_allowed": "error",
         "length_out_of_range": "error",
-        "lib_footprint_issues": "warning",
+        "lib_footprint_issues": "ignore",
         "lib_footprint_mismatch": "warning",
         "malformed_courtyard": "error",
         "microvia_drill_out_of_range": "error",
@@ -535,7 +530,7 @@
     ],
     [
       "0f8a3c3e-e197-47b5-881d-2ae4e2374020",
-      "Instability VCA"
+      "Salt VCA"
     ],
     [
       "2f882567-d4bc-4d02-ab1f-fc30e1722a04",

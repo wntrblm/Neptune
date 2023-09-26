@@ -6,7 +6,7 @@
 
   (title_block
     (title "Neptune")
-    (date "2023-07-20")
+    (date "2023-09-26")
     (rev "v0")
     (company "Winterbloom")
     (comment 1 "Carson Walls")
@@ -874,7 +874,7 @@
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 684d4b11-08d2-4892-95d1-d9653a827ae4)
   )
-  (hierarchical_label "INSTABILITY_IN" (shape input) (at 104.14 152.4 180) (fields_autoplaced)
+  (hierarchical_label "SALT_IN" (shape input) (at 104.14 152.4 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid aee508ed-5959-448d-916d-1b1a9622455d)
   )

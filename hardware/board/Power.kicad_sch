@@ -6,7 +6,7 @@
 
   (title_block
     (title "Neptune")
-    (date "2023-07-20")
+    (date "2023-09-26")
     (rev "v0")
     (company "Winterbloom")
     (comment 1 "Carson Walls")
@@ -3590,7 +3590,7 @@
   )
 
   (symbol (lib_id "Device:C_Small") (at 177.165 75.565 0) (mirror x) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom yes) (on_board yes) (dnp yes)
     (uuid bded87a7-9473-4272-8db6-45127c2db6be)
     (property "Reference" "C?" (at 174.625 73.6536 0)
       (effects (font (size 1.27 1.27)) (justify right))
