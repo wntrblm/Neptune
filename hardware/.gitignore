@@ -4,6 +4,7 @@
 # Local-only files
 *.kicad_prl
 *-backups/
+*.lck
 
 # Temporary files
 *.000
