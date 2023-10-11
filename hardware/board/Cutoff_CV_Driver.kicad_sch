@@ -6,8 +6,8 @@
 
   (title_block
     (title "Neptune")
-    (date "2023-09-26")
-    (rev "v0")
+    (date "2023-10-10")
+    (rev "v1")
     (company "Winterbloom")
     (comment 1 "Carson Walls")
     (comment 2 "CERN-OHL-P v2")
@@ -1263,7 +1263,7 @@
     (property "Notes" "" (at 177.8 99.06 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Rating" "100mW/5%" (at 177.8 96.52 90)
+    (property "Rating" "100mW/1%" (at 177.8 96.52 90)
       (effects (font (size 1.27 1.27)))
     )
     (pin "1" (uuid 272dc85d-2592-421c-b025-a56486e95aa4))

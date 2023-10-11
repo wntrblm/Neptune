@@ -6,8 +6,8 @@
 
   (title_block
     (title "Neptune")
-    (date "2023-09-26")
-    (rev "v0")
+    (date "2023-10-10")
+    (rev "v1")
     (company "Winterbloom")
     (comment 1 "Carson Walls")
     (comment 2 "CERN-OHL-P v2")
@@ -1421,7 +1421,7 @@
   )
 
   (symbol (lib_id "Device:C_Small") (at 105.41 117.475 0) (mirror x) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 06f4b5c5-5f4e-475e-bde1-7b75b4719a6a)
     (property "Reference" "C?" (at 109.22 114.935 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -1444,8 +1444,8 @@
     (property "MPN" "C1608X7R1E104K080AA" (at 105.41 117.475 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid e36d7392-a0f1-4a70-8ea3-b29eee4c0303))
-    (pin "2" (uuid 078a9b5f-707b-4b2b-8137-222a173e9d96))
+    (pin "1" (uuid e4671a57-d13a-4e4c-b842-2d106ad316ca))
+    (pin "2" (uuid 2d5cf7a2-2b2b-460b-8b45-ecad4088e03f))
     (instances
       (project "board"
         (path "/55082cc1-c956-45a6-b2b5-3db02a6da9d0"
@@ -1515,7 +1515,7 @@
   )
 
   (symbol (lib_id "Device:C_Small") (at 139.7 117.475 0) (mirror x) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 091efc5c-eab4-48cf-a17a-fffcccb63b40)
     (property "Reference" "C?" (at 143.51 114.935 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -1538,8 +1538,8 @@
     (property "MPN" "C1608X7R1E104K080AA" (at 139.7 117.475 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 4c6c034e-8fb9-4f2a-8c2d-379db4175952))
-    (pin "2" (uuid acac70a7-bb8f-415e-af3b-c9d769249027))
+    (pin "1" (uuid a2c0bb09-395a-4dc3-bb49-dc5a4b8019eb))
+    (pin "2" (uuid 50d068d5-eaa4-49ee-8944-33b5031360a8))
     (instances
       (project "board"
         (path "/55082cc1-c956-45a6-b2b5-3db02a6da9d0"
@@ -1790,12 +1790,12 @@
   )
 
   (symbol (lib_id "Device:C_Small") (at 95.25 49.53 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 172ffb12-182c-457f-a949-a02fc89ad3c5)
-    (property "Reference" "C?" (at 99.06 47.6313 0)
+    (property "Reference" "C?" (at 97.79 47.6313 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "10u" (at 98.425 50.1713 0)
+    (property "Value" "10u" (at 97.79 50.1713 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "winterbloom:C_0805_HandSolder" (at 95.25 49.53 0)
@@ -1807,7 +1807,7 @@
     (property "Notes" "Bulk cap" (at 95.25 49.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Rating" "25V/10%" (at 98.425 52.7113 0)
+    (property "Rating" "25V/10%" (at 97.79 52.7113 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "MPN" "GRM21BR61E106KA73K" (at 95.25 49.53 0)
@@ -1830,7 +1830,7 @@
   )
 
   (symbol (lib_id "Device:C_Small") (at 53.34 86.995 0) (mirror y) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 176fd9fe-ae2b-4960-b8df-0d4d07d2b6d0)
     (property "Reference" "C?" (at 57.15 84.455 0)
       (effects (font (size 1.27 1.27)) (justify right))
@@ -1853,8 +1853,8 @@
     (property "MPN" "C1608X7R1E104K080AA" (at 53.34 86.995 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 412b1b10-b9a2-40ff-8e2c-5a13a15607fd))
-    (pin "2" (uuid 70c7d201-9291-4c8a-908d-bc203384f20c))
+    (pin "1" (uuid 12ea33d7-6c94-4663-98ec-1494cb5a455a))
+    (pin "2" (uuid c604c48d-20e0-4c57-88f8-bdbdf24ed5c8))
     (instances
       (project "board"
         (path "/55082cc1-c956-45a6-b2b5-3db02a6da9d0"
@@ -1878,7 +1878,7 @@
   )
 
   (symbol (lib_id "Device:C_Small") (at 88.9 86.995 0) (mirror y) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 18e4df00-612a-40c9-a21b-e20fec7b0b05)
     (property "Reference" "C?" (at 92.71 84.455 0)
       (effects (font (size 1.27 1.27)) (justify right))
@@ -1901,8 +1901,8 @@
     (property "MPN" "C1608X7R1E104K080AA" (at 88.9 86.995 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 318c9f90-110e-4767-8d3a-caa41fe52542))
-    (pin "2" (uuid ea83900f-72dc-44e7-8129-46162652310b))
+    (pin "1" (uuid 91d3aa68-402a-4a35-930a-7b2155641600))
+    (pin "2" (uuid 825b23b6-a7ce-4da0-a6dd-1a479d060572))
     (instances
       (project "board"
         (path "/55082cc1-c956-45a6-b2b5-3db02a6da9d0"
@@ -1949,8 +1949,8 @@
     (property "MPN" "742792664" (at 56.515 43.815 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid e98d8cba-6c6f-488b-8671-d73607855743))
-    (pin "2" (uuid aa1c4415-5b7a-45df-bdcc-0f5a163c6f1c))
+    (pin "1" (uuid 0c1051b2-be51-4a2b-a02d-422d0ee2bcf9))
+    (pin "2" (uuid 96a94c0f-7709-4bca-8c83-c7694ab43b7a))
     (instances
       (project "board"
         (path "/55082cc1-c956-45a6-b2b5-3db02a6da9d0"
@@ -2401,7 +2401,7 @@
   )
 
   (symbol (lib_id "Device:C_Small") (at 53.34 117.475 0) (mirror x) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4abb5f8d-ab73-415b-b0d5-166c4c597184)
     (property "Reference" "C?" (at 57.15 114.935 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -2424,8 +2424,8 @@
     (property "MPN" "C1608X7R1E104K080AA" (at 53.34 117.475 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid e5d12fea-fc10-4baf-b465-e622bfa78cac))
-    (pin "2" (uuid 3565c7cd-b667-4507-94a2-a87ad58d3c15))
+    (pin "1" (uuid 2f0d3fce-e297-4ef2-a3c0-216c07db72d1))
+    (pin "2" (uuid de01b440-8513-4ecd-91c8-7f86fdd613bd))
     (instances
       (project "board"
         (path "/55082cc1-c956-45a6-b2b5-3db02a6da9d0"
@@ -2519,10 +2519,10 @@
   (symbol (lib_id "Diode:1N5819") (at 71.12 40.005 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4ca6b31b-2fae-4b8b-b085-20218043583d)
-    (property "Reference" "D?" (at 71.4375 32.385 0)
+    (property "Reference" "D?" (at 71.4375 31.75 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "30V" (at 71.4375 34.925 0)
+    (property "Value" "30V" (at 71.4375 34.29 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "winterbloom:D_SOD-123+SOD-123F" (at 71.12 35.56 0)
@@ -2534,7 +2534,7 @@
     (property "Notes" "Power diode, any PMEGxxxxEGW part, 500mA If" (at 71.12 40.005 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Rating" "500mA" (at 71.4375 37.465 0)
+    (property "Rating" "500mA" (at 71.4375 36.83 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "MPN" "PMEG2005EGWX" (at 71.12 40.005 0)
@@ -2602,7 +2602,7 @@
   )
 
   (symbol (lib_id "Device:C_Small") (at 139.7 86.995 0) (mirror y) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5b15114c-952b-4a08-803f-6adb3b040de4)
     (property "Reference" "C?" (at 143.51 84.455 0)
       (effects (font (size 1.27 1.27)) (justify right))
@@ -2625,8 +2625,8 @@
     (property "MPN" "C1608X7R1E104K080AA" (at 139.7 86.995 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 889bf422-c2ea-449e-9dac-cb7809624ff2))
-    (pin "2" (uuid 256a585d-24b5-4a13-9bdd-7ee1e4fc365e))
+    (pin "1" (uuid d8c71f7a-cc4b-492f-958b-cb55d697949f))
+    (pin "2" (uuid cf0391c7-d1bc-46cc-9298-786b5cb2d96b))
     (instances
       (project "board"
         (path "/55082cc1-c956-45a6-b2b5-3db02a6da9d0"
@@ -2680,12 +2680,12 @@
   )
 
   (symbol (lib_id "Device:C_Small") (at 124.46 49.53 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5c1a694a-955e-4526-b739-0870d8815c39)
-    (property "Reference" "C?" (at 128.27 47.6313 0)
+    (property "Reference" "C?" (at 127 47.6313 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "10u" (at 127.635 50.1713 0)
+    (property "Value" "10u" (at 127 50.1713 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "winterbloom:C_0805_HandSolder" (at 124.46 49.53 0)
@@ -2697,7 +2697,7 @@
     (property "Notes" "Bulk cap" (at 124.46 49.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Rating" "25V/10%" (at 127.635 52.7113 0)
+    (property "Rating" "25V/10%" (at 127 52.7113 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "MPN" "GRM21BR61E106KA73K" (at 124.46 49.53 0)
@@ -2750,7 +2750,7 @@
   )
 
   (symbol (lib_id "Device:C_Small") (at 123.19 117.475 0) (mirror x) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 63c413ae-585b-4e56-beb9-4d9e42698fd8)
     (property "Reference" "C?" (at 127 114.935 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -2773,8 +2773,8 @@
     (property "MPN" "C1608X7R1E104K080AA" (at 123.19 117.475 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 748476b9-90c0-40ae-9486-71a63137b053))
-    (pin "2" (uuid 196f938f-d42b-4c15-abf3-59f11c4c4c84))
+    (pin "1" (uuid 090b99a0-2aa6-48b7-a4b3-c3893ef47fdf))
+    (pin "2" (uuid 69536329-664f-41b6-b586-72e8178e59c9))
     (instances
       (project "board"
         (path "/55082cc1-c956-45a6-b2b5-3db02a6da9d0"
@@ -2843,7 +2843,7 @@
   )
 
   (symbol (lib_id "Device:C_Small") (at 88.9 117.475 0) (mirror x) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7f424c47-9fc6-4916-92b7-fb0bf4c4e2c6)
     (property "Reference" "C?" (at 92.71 114.935 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -2866,8 +2866,8 @@
     (property "MPN" "C1608X7R1E104K080AA" (at 88.9 117.475 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 2138ec6e-15b7-47c5-9f73-471b0c5fd83f))
-    (pin "2" (uuid 86c9e288-0daa-401f-9583-4a87f77a4a77))
+    (pin "1" (uuid ebf84b13-0eb1-43af-a7ba-10184b658039))
+    (pin "2" (uuid 1037a490-dd98-4e4a-ac6d-51d8d3228ef3))
     (instances
       (project "board"
         (path "/55082cc1-c956-45a6-b2b5-3db02a6da9d0"
@@ -2959,7 +2959,7 @@
   )
 
   (symbol (lib_id "Device:C_Small") (at 71.12 86.995 0) (mirror y) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 90594dfd-e981-4c0e-916b-d588f015f1ff)
     (property "Reference" "C?" (at 74.93 84.455 0)
       (effects (font (size 1.27 1.27)) (justify right))
@@ -2982,8 +2982,8 @@
     (property "MPN" "C1608X7R1E104K080AA" (at 71.12 86.995 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid e90e5ef7-3694-4211-b203-bdf375b5c929))
-    (pin "2" (uuid d3698cb2-4d1f-44be-9812-ae9a3993f487))
+    (pin "1" (uuid c3e851d4-aa63-43f8-b46b-7bb0e4c27b4b))
+    (pin "2" (uuid 1be56c03-6c3e-48d0-af73-e7387357cbee))
     (instances
       (project "board"
         (path "/55082cc1-c956-45a6-b2b5-3db02a6da9d0"
@@ -3210,7 +3210,7 @@
   )
 
   (symbol (lib_id "Device:C_Small") (at 105.41 86.995 0) (mirror y) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9c5b1036-45b8-4685-a7bf-68356089838e)
     (property "Reference" "C?" (at 109.22 84.455 0)
       (effects (font (size 1.27 1.27)) (justify right))
@@ -3233,8 +3233,8 @@
     (property "MPN" "C1608X7R1E104K080AA" (at 105.41 86.995 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid fa9dc559-dcf6-456f-9f0a-a65c22bc3624))
-    (pin "2" (uuid 60b4306c-02ad-4518-8ff8-cff5e7301b80))
+    (pin "1" (uuid fe6453ab-f0e9-4d3d-a6e6-165efa747a15))
+    (pin "2" (uuid c9a2cdb9-76b7-4928-bbf2-add46ff50230))
     (instances
       (project "board"
         (path "/55082cc1-c956-45a6-b2b5-3db02a6da9d0"
@@ -3258,7 +3258,7 @@
   )
 
   (symbol (lib_id "Device:C_Small") (at 71.12 117.475 0) (mirror x) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9f3e2697-0405-4a87-ab00-f159e7d34245)
     (property "Reference" "C?" (at 74.93 114.935 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -3281,8 +3281,8 @@
     (property "MPN" "C1608X7R1E104K080AA" (at 71.12 117.475 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 8492b846-8f95-47b1-b22d-690766c327de))
-    (pin "2" (uuid f2080426-af1e-4e57-8ad3-620bab8dd13b))
+    (pin "1" (uuid 2b681dfb-46e3-4169-b4df-1748cc0035db))
+    (pin "2" (uuid f34da504-3815-4630-8d5b-c0af9bff138b))
     (instances
       (project "board"
         (path "/55082cc1-c956-45a6-b2b5-3db02a6da9d0"
@@ -3459,10 +3459,10 @@
   (symbol (lib_id "Device:FerriteBead_Small") (at 56.515 40.005 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b1733332-0fa2-4162-859b-9af686ae3823)
-    (property "Reference" "FB?" (at 56.5531 32.385 90)
+    (property "Reference" "FB?" (at 56.5531 31.75 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "1k @ 100MHz" (at 56.5531 34.925 90)
+    (property "Value" "1k @ 100MHz" (at 56.5531 34.29 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "winterbloom:L_0603_HandSolder" (at 56.515 38.227 90)
@@ -3474,7 +3474,7 @@
     (property "Notes" "" (at 56.515 40.005 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Rating" "300mA" (at 56.5531 37.465 90)
+    (property "Rating" "300mA" (at 56.5531 36.83 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "MPN" "742792664" (at 56.515 40.005 0)
@@ -3638,7 +3638,7 @@
   )
 
   (symbol (lib_id "winterbloom:TL074") (at 55.88 102.235 0) (unit 5)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c745a7ff-6af5-42ae-8e84-9f9e634eddf5)
     (property "Reference" "U?" (at 55.88 106.045 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -3655,20 +3655,20 @@
     (property "MPN" "TL074CPW" (at 55.88 94.615 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 06012fce-3ff8-406b-b754-058e1a27a23e))
-    (pin "2" (uuid 55c4e5c1-cc32-4efc-a0f6-c00e5e1ea9d3))
-    (pin "3" (uuid a6757b9b-12ce-493f-ac42-728a3a5aa022))
-    (pin "5" (uuid b746526d-36c4-4f89-a2fb-4e87a2389bf1))
-    (pin "6" (uuid 72cef894-6715-4e08-a56a-89b5edc95ca7))
-    (pin "7" (uuid bf8437a0-231e-41fb-b8cc-45214090bac7))
-    (pin "10" (uuid a48e24fb-9cd4-42a3-92c1-278314d6dd3b))
-    (pin "8" (uuid ba2a99a9-4402-413f-acdd-1f12862ab722))
-    (pin "9" (uuid 164e66f0-a38e-4bb6-8588-f9e7fba16a52))
-    (pin "12" (uuid dd0d3840-7171-4a0e-858d-e6d1d8572318))
-    (pin "13" (uuid ef8ba2b3-5f7f-4bbd-be6d-56e707f4293d))
-    (pin "14" (uuid c398b339-c862-42bd-9e51-7e2e0715eccb))
-    (pin "11" (uuid cdd2bff5-fdac-46ad-8f53-65352b4a0102))
-    (pin "4" (uuid 1b5e66b4-f302-419a-a476-7e57192b6b64))
+    (pin "1" (uuid 3992103d-8f95-4e48-a457-e10e9b7b8166))
+    (pin "2" (uuid 37c90825-61c6-44b3-b01a-22a04259f733))
+    (pin "3" (uuid ecba99d2-7260-4ee8-995b-28bae29f64ef))
+    (pin "5" (uuid b6977a89-0855-4601-a3c2-4abd29df4750))
+    (pin "6" (uuid b9b9dc7f-99e3-4e45-a549-a9bbb17e9ed3))
+    (pin "7" (uuid df76f883-6549-4559-8f04-55f87bd888f2))
+    (pin "10" (uuid 9a359192-9777-42f9-ab3a-8336648a020c))
+    (pin "8" (uuid 0e69ced7-d985-4b79-be5f-c63ea30b38bf))
+    (pin "9" (uuid 2b66e9a4-ba8c-4148-9c33-6f443bb34cfa))
+    (pin "12" (uuid 1bd03183-b8e5-4f05-9c59-d6396f01e106))
+    (pin "13" (uuid c1bcf19a-848b-40dc-ab35-193ec2db9831))
+    (pin "14" (uuid 34065c1f-6312-4ed3-8d35-28482b7e57e7))
+    (pin "11" (uuid d0b5e78c-15ce-484d-a1be-003338a4991a))
+    (pin "4" (uuid e8e87eb1-10cd-42eb-945a-057aa6ab0242))
     (instances
       (project "VCA_0.3"
         (path "/0739a502-7fa1-4e85-8cae-604fd21c9156"
@@ -3845,7 +3845,7 @@
   )
 
   (symbol (lib_id "Device:C_Small") (at 123.19 86.995 0) (mirror y) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d5f8953f-ba29-496e-823b-b5db7040fd11)
     (property "Reference" "C?" (at 127 84.455 0)
       (effects (font (size 1.27 1.27)) (justify right))
@@ -3868,8 +3868,8 @@
     (property "MPN" "C1608X7R1E104K080AA" (at 123.19 86.995 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid a6e7bfa8-8387-42b1-8d8f-9e94da4fb30e))
-    (pin "2" (uuid 6b48b03e-8006-4166-84ab-fd1ad0cf2cd2))
+    (pin "1" (uuid c0748e64-d73b-4e8c-a3d8-a40c9cd9cce8))
+    (pin "2" (uuid bd38c05c-1c9d-417b-90f0-6e390829fa07))
     (instances
       (project "board"
         (path "/55082cc1-c956-45a6-b2b5-3db02a6da9d0"
