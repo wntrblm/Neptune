@@ -1,4 +1,4 @@
-from _descriptors import CVDescriptor, KnobDescriptor, SwitchDescriptor
+from ._descriptors import CVDescriptor, KnobDescriptor, SwitchDescriptor
 
 CW = KnobDescriptor.CW
 CCW = KnobDescriptor.CCW
@@ -50,25 +50,37 @@ class NeptuneLens:
         self.reset()
         self.lp_vol_knob = CW
         self.cutoff_knob = CW
-        self.lp_jack_to_dac = True
+        self.lp_jack_to_fg = True
+
+    def knob_tests_low_pass_centered(self):
+        self.reset()
+        self.lp_vol_knob = CW
+        self.cutoff_knob = CENTER
+        self.lp_jack_to_fg = True
 
     def knob_tests_low_pass_fully_closed(self):
         self.reset()
         self.lp_vol_knob = CW
         self.cutoff_knob = CCW
-        self.lp_jack_to_dac = True
+        self.lp_jack_to_fg = True
 
     def knob_tests_high_pass_fully_open(self):
         self.reset()
         self.hp_vol_knob = CW
         self.cutoff_knob = CCW
-        self.hp_jack_to_dac = True
+        self.hp_jack_to_fg = True
+
+    def knob_tests_high_pass_centered(self):
+        self.reset()
+        self.hp_vol_knob = CW
+        self.cutoff_knob = CENTER
+        self.hp_jack_to_fg = True
 
     def knob_tests_high_pass_fully_closed(self):
         self.reset()
         self.hp_vol_knob = CW
         self.cutoff_knob = CW
-        self.hp_jack_to_dac = True
+        self.hp_jack_to_fg = True
 
     def knob_tests_self_oscillation(self):
         self.reset()
@@ -115,11 +127,11 @@ class NeptuneLens:
 
     def cv_tests_self_oscillation(self):
         self.reset()
-        self.cutoff_knob = CW
-        self.reso_cv = +4.4
+        self.cutoff_knob = CENTER
+        self.reso_cv = +4.5
 
     def cv_tests_salty_self_oscillation(self):
         self.reset()
-        self.cutoff_knob = CW
-        self.reso_cv = +4.4
-        self.salt_cv = +5.0
+        self.cutoff_knob = CENTER
+        self.reso_cv = +5
+        self.salt_cv = 5

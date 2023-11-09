@@ -1,1 +1,1 @@
-from neptune import NeptuneLens, CCW, CW, CENTER
+from .neptune import NeptuneLens, CCW, CW, CENTER

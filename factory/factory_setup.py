@@ -11,7 +11,7 @@ lens = NeptuneLens(hubble)
 
 def alt():
     lens.reset()
-    lens.knob_tests_low_pass_fully_open()
+    lens.cv_tests_fm1_full_inversion()
     print("ok")
 
 
