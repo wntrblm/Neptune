@@ -3,3 +3,4 @@ distribution/
 calibrations/
 logs/
 reports/
+__pycache__

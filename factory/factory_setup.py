@@ -1,14 +1,23 @@
 from rich import print
 from wintertools import reportcard, thermalprinter
-from wintertools.multimeter import Multimeter
-
 from hubble import Hubble
 
-h = Hubble()
+from libneptune import NeptuneLens
 
-if __name__ == "__main__":
+
+hubble = Hubble()
+lens = NeptuneLens(hubble)
+
+
+def alt():
+    lens.reset()
+    lens.knob_tests_low_pass_fully_open()
+    print("ok")
+
+
+def main():
     report = reportcard.Report(
-        name="?",
+        name="Neptune",
     )
 
     print(report)
@@ -16,11 +25,16 @@ if __name__ == "__main__":
     reportcard.render_html(report)
 
     if report.succeeded:
-        h.success()
+        hubble.success()
         print("PASSED")
     else:
-        h.fail()
+        hubble.fail()
         print("FAILED")
 
     if report.succeeded:
         thermalprinter.print_me_maybe(reportcard.render_image(report))
+
+
+if __name__ == "__main__":
+    # main()
+    alt()
