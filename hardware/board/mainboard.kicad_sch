@@ -6,8 +6,8 @@
 
   (title_block
     (title "Neptune")
-    (date "2023-10-10")
-    (rev "v1")
+    (date "2023-11-09")
+    (rev "v2")
     (company "Winterbloom")
     (comment 1 "Carson Walls")
     (comment 2 "CERN-OHL-P v2")
@@ -136,13 +136,13 @@
     (uuid f47ff88d-48ff-4db8-9546-8758303c5cf5)
   )
 
-  (text "Neptune" (at 17.78 25.4 0)
-    (effects (font (size 5 5) (thickness 0.508) bold) (justify left bottom))
+  (text "Neptune" (at 15.875 33.655 0)
+    (effects (font (face "Space Mono") (size 10 10) (thickness 0.508) bold italic) (justify left bottom))
     (uuid 61406eb9-c665-4f15-97b1-a7e9c515e973)
   )
-  (text "4 Pole Diode Ladder Filter\n\nDesigned By Carson Walls\n\nInspired by Moritz Klein\n\nSimulations Link:\nhttps://github.com/wntrblm/Neptune/tree/main/simulation\n\n\n"
-    (at 18.415 49.53 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
+  (text "A salty diode ladder filter\n\nDesigned by Carson Walls & Thea Flowers\nInspired by Moritz Klein & Arturia\n\nOpen-source hardware under CERN-OHL-P V2\n\nDocumentation: https://neptune.wntr.dev\nSource: https://github.com/wntrblm/Neptune"
+    (at 17.145 65.405 0)
+    (effects (font (face "Nunito") (size 2 2)) (justify left bottom))
     (uuid f9b04710-975f-4ad6-a6e4-6f9e2802efb9)
   )
 
