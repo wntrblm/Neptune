@@ -32,3 +32,5 @@ fp-info-cache
 
 .svg2shenzhen-cache
 gerbers/
+
+*.FCStd1
