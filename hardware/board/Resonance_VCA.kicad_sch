@@ -1192,18 +1192,8 @@
     (uuid ff58cb1f-0ebe-4adf-9e8a-43a50aaa160f)
   )
 
-  (rectangle (start 15.24 40.64) (end 264.16 169.545)
-    (stroke (width 0) (type default))
-    (fill (type none))
-    (uuid f5c8060d-e4cc-4af2-9a7e-331996db7c2e)
-  )
-
-  (text "Resonance VCA" (at 16.51 46.99 0)
-    (effects (font (face "Space Grotesk") (size 3 3) (thickness 0.508) bold) (justify left bottom))
-    (uuid 1bcea2b3-66d8-4ecb-82b8-f1e7d6366096)
-  )
   (text "Controls the depth of the resonance feedback circuit \n\nCV input: 5 V nominal\nCV Cutoff: ~2.5 kHz\nSelf resonance gain threshold: -8 dB\nMax self resonant frequency: ~16 kHz\nMax gain: -5.5 dB\n\n\n"
-    (at 16.51 69.85 0)
+    (at 10.16 47.625 0)
     (effects (font (face "Nunito") (size 1.5 1.5)) (justify left bottom))
     (uuid 5ddb675b-d853-44cc-98a1-91586a3d24a1)
   )
