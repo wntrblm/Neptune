@@ -1,6 +1,7 @@
 distribution/
 .cache/
 calibrations/
+measurements/
 logs/
 reports/
 __pycache__

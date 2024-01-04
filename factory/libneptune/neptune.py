@@ -82,24 +82,44 @@ class NeptuneLens:
         self.cutoff_knob = CW
         self.hp_jack_to_fg = True
 
+    def knob_tests_resonant_low_pass(self):
+        self.reset()
+        self.lp_vol_knob = CW
+
+        # Use the FM1 CV to get a specific frequency that helps us identify
+        # the resonance
+        self.cutoff_knob = CCW
+        self.fm1_knob = CW
+        self.fm1_cv = 4.0
+
+        self.reso_knob = CW
+        self.lp_jack_to_fg = True
+
+    def knob_tests_salty_low_pass(self):
+        self.reset()
+        self.lp_vol_knob = CW
+
+        # Use the FM1 CV to get a specific frequency that helps us identify
+        # the feedback distortion
+        self.cutoff_knob = CCW
+        self.fm1_knob = CW
+        self.fm1_cv = 4.0
+
+        self.salt_knob = CW
+        self.lp_jack_to_fg = True
+
     def knob_tests_self_oscillation(self):
         self.reset()
         self.cutoff_knob = CENTER
         self.reso_knob = CW
-
-    def knob_tests_salty_self_oscillation(self):
-        self.reset()
-        self.cutoff_knob = CENTER
-        self.reso_knob = CW
-        self.salt_knob = CW
 
     def cv_tests_fm1_full(self):
         self.reset()
         self.lp_vol_knob = CW
         self.cutoff_knob = CCW
         self.fm1_knob = CW
-        self.lp_jack_to_fg = True
         self.fm1_cv = +5.0
+        self.lp_jack_to_fg = True
 
     def cv_tests_fm1_full_inversion(self):
         self.reset()
@@ -123,15 +143,27 @@ class NeptuneLens:
         self.cutoff_knob = CW
         self.lp_jack_to_fg = True
         self.vol_jack_to_dac = True
-        self.vol_cv = +5.0
+        self.vol_cv = +2.5
+
+    def cv_tests_resonant_low_pass(self):
+        self.reset()
+        self.lp_vol_knob = CW
+        self.cutoff_knob = CCW
+        self.fm1_knob = CW
+        self.fm1_cv = 4.0
+        self.reso_cv = 7.8
+        self.lp_jack_to_fg = True
+
+    def cv_tests_salty_low_pass(self):
+        self.reset()
+        self.lp_vol_knob = CW
+        self.cutoff_knob = CCW
+        self.fm1_knob = CW
+        self.fm1_cv = 4
+        self.salt_cv = 5
+        self.lp_jack_to_fg = True
 
     def cv_tests_self_oscillation(self):
         self.reset()
         self.cutoff_knob = CENTER
         self.reso_cv = +4.5
-
-    def cv_tests_salty_self_oscillation(self):
-        self.reset()
-        self.cutoff_knob = CENTER
-        self.reso_cv = +5
-        self.salt_cv = 5
