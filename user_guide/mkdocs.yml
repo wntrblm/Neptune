@@ -1,17 +1,18 @@
-site_name: Winterbloom ? User Guide
-site_url: https://?.wntr.dev
-copyright: "© 2021 Winterbloom, Licensed under Creative Commons CC BY-SA 4.0"
-repo_url: "https://github.com/wntrblm/?"
+site_name: Winterbloom Neptune User Guide
+site_url: https://neptune.wntr.dev
+copyright: "© 2024 Winterbloom LLC, Licensed under Creative Commons CC BY-SA 4.0"
+repo_url: "https://github.com/wntrblm/Neptune"
 edit_uri: edit/main/user_guide/docs
 theme:
     name: winterbloom
 markdown_extensions:
     - admonition
     - def_list
+    - abbr
     - attr_list
     - toc:
           permalink: "#"
-          toc_depth: 2-3
+          toc_depth: 2-2
     - pymdownx.highlight:
           use_pygments: True
     - pymdownx.superfences
