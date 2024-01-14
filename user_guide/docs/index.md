@@ -250,6 +250,8 @@ We have stress tested Neptune under the following conditions. These are provided
 -   Over and under voltage on inputs: at least `±11 V`
 -   Output shorted to ground: at least `60 minutes`
 
+[email]: mailto:support@winterbloom.com
+
 ## Acknowledgments and thanks
 
 Neptune would not be possible without the excellent educational YouTube videos by [Moritz Klein], and the help of him and others on his discord server. We would also like to acknowledge the following individuals for their outstanding support:
