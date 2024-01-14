@@ -53,6 +53,8 @@ Neptune belongs to _diode ladder_ family of filters. These filters are known for
 Neptune is a collaboration between [Carson Walls] and [Winterbloom]. Carson crafted Neptune's voice and designed the electronics, while Thea & Maggie crafted Neptune's visuals, interface, and physical design.
 
 *[OTA]: Operational transconductance amplifier
+[Carson Walls]: https://decapoddevices.com
+[Winterbloom]: https://winterbloom.com
 
 
 ## Interface
