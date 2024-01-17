@@ -1,6 +1,6 @@
 # Neptune
 
-Winterbloom's [Neptune][store-assembled] is a resonant diode ladder filter inspired by the designs of [Moritz Klein] and [Arturia]. It's intended to bring together sound and modulation into a complete, distinct synthesizer voice. Unlike typical multi-mode filters, Neptune has separate low-pass and high-pass _inputs_ into the filter core. This filter core is coupled with feedback modulated distortion called _salt_ that opens up a wide range of tonal possibilities from tame to dirty to outright chaotic.
+Winterbloom's [Neptune][store-assembled] is a resonant diode ladder filter inspired by the designs of [Moritz Klein] and [Arturia]. It's intended to bring together sound and modulation into a complete, distinct synthesizer voice. Unlike typical multi-mode filters with separate modes or outputs, Neptune instead has separate low-pass and high-pass _inputs_ into a single filter core. This filter core is coupled with a feedback modulated distortion circuit called _salt_ that opens up a wide range of tonal possibilities from tame to dirty to outright chaotic.
 
 [store-assembled]: https://winterbloom.com/shop/neptune
 [store-kit]: https://winterbloom.com/shop/neptune-kit
@@ -50,7 +50,7 @@ Neptune is also a _resonant_ filter, which allows you to boost the frequencies a
 
 Neptune belongs to _diode ladder_ family of filters. These filters are known for their characteristic "dirty" sound compared to the modern, popular "smooth" OTA family. Diode filters behave quite differently from their counterparts, exhibiting increasingly non-linear behavior when overdriven or operated with high resonance. Neptune itself shares a lot of similarities with the _Steiner_ filters found in Arturia's Brute series, but the addition of the salt feedback circuit allows for a broader range of unpredictable sounds.
 
-Neptune is a collaboration between [Carson Walls] and [Winterbloom]. Carson crafted Neptune's voice and designed the electronics, while Thea & Maggie crafted Neptune's visuals, interface, and physical design.
+Neptune is a collaboration between [Carson Walls] and [Winterbloom]. Carson crafted Neptune's voice, layout, and electronics design, while Thea & Maggie took on Neptune's visuals, interface, physical design, and manufacturing.
 
 *[OTA]: Operational transconductance amplifier
 [Carson Walls]: https://decapoddevices.com
@@ -114,7 +114,7 @@ Unlike many filters, Neptune does not cut out bass frequencies as the resonance 
 
 Neptune includes a feedback modulation circuit called _Salt_. When used sparingly, salt can add a bit of subtle grit and sonic character to your sound. When used with gleeful abandon, salt will create increasingly chaotic distortion with harsh overtones.
 
-Salt is controlled by the `salt` knob and CV input. The `salt` knob introduces more and more resonance as you turn the knob clockwise. Keep in mind that salt and resonance are inherently linked and interact strongly, meaning that more resonance will increase salt's effect and vice versa. There are many textures to be found in different combinations of salt, resonance, and input volume.
+Salt is controlled by the `salt` knob and CV input. The `salt` knob introduces more and more feedback modulation as you turn the knob clockwise. Keep in mind that salt and resonance are inherently linked and interact strongly, meaning that more resonance will increase salt's effect and vice versa. There are many textures to be found in different combinations of salt, resonance, and input volume.
 
 
 ## Example patches
@@ -196,10 +196,10 @@ The next patch uses both inputs to create a high/low shelf filter:
 -   Turn the `reso` and `salt` knobs all the way counterclockwise
 -   Turn the `♆` knob to 12 o' clock
 -   Turn the small `lp` and `hp` volume knobs to about 12 o' clock
--   Using a multiple, patch the *same* oscillator signal into both `lp` and `hp` input jacks
+-   Using a multiple or stackcable, patch the *same* oscillator signal into both `lp` and `hp` input jacks
 -   Patch the output jack to your rack's output or headphones module
 
-Once patched, you can use the `lp` and `hp` volume knobs as your low- and high-pass shelves. You can use resonance as a frequency boost to *emphasize* the frequencies around the cutoff frequency without cutting out the rest.
+Once patched, you can use the `lp` and `hp` volume knobs as your low- and high-pass shelves while the `♆` knob controls the shelving frequency. You can use resonance as a frequency boost to *emphasize* the frequencies around the shelving frequency without cutting out the rest.
 
 <!-- TODO: Audio samples -->
 
@@ -264,7 +264,7 @@ These ideas go beyond the example patches and may help you explore Neptune's use
 
 ### Basic synth voice
 
-Use any oscillator as the input for the LP in, preferably with a sharp waveform like a saw or square. Use an envelope going the `fm2` and `vol` inputs. Trigger the envelope with a gate source from a keyboard or sequencer. Adjust the envelope timings to get long drones notes, or quick percussive ones. Adjust the cutoff frequency, `fm1` amount, resonance, and salt to hear the range of possible sounds from the low-pass filter.
+Use any oscillator as the input for the `lp` in, preferably with a sharp waveform like a saw or square. Use an envelope going the `fm1` and `vol` inputs. Trigger the envelope with a gate source from a keyboard or sequencer. Adjust the envelope timings to get long drones notes, or quick percussive ones. Adjust the cutoff frequency, `fm1` amount, resonance, and salt to hear the range of possible sounds from the low-pass filter.
 
 ### Spectral crossfading synth voice
 
@@ -280,11 +280,11 @@ Leave the `hp` and `lp` inputs unpatched and turn `reso` up until the filter sta
 
 ### Drum effects
 
-Send a drum mix, such as a recording or a mix of synthesized drums, to both the `lp` and `hp` inputs. This will make the filter act like [a shelf filter](#highlow-shelf-filter). The `lp` and `lp` volume knobs act as the level for the low shelf and the high shelf, while the cutoff frequency controls the crossover point of the shelves. Try adding a bit of resonance, lowering the high pass volume a bit to make a low shelf filter, and adjusting the cutoff frequency to target specific frequencies in the drum mix. For example try to emphasizing the snare or getting rid of some of the high frequencies without cutting them out completely like on a traditional low pass filter.
+Send a drum mix, such as a recording or a mix of synthesized drums, to both the `lp` and `hp` inputs. This will make the filter act like [a shelf filter](#highlow-shelf-filter). The `lp` and `hp` volume knobs act as the level for the low shelf and the high shelf, while the cutoff frequency controls the crossover point of the shelves. Try adding a bit of resonance, lowering the high pass volume a bit to make a low shelf filter, and adjusting the cutoff frequency to target specific frequencies in the drum mix. For example try to emphasizing the snare or getting rid of some of the high frequencies without cutting them out completely like on a traditional low pass filter.
 
 ### Loop crossfader
 
-Use a device like an [Octatrack], [Digitakt], or any sampler that can output two different loops matched to the same tempo. Send one loop to the `lp` input and the other loop to the `hp` input. Adjusting the cutoff frequency will allow you to fade between the frequencies of the two loops. If the cutoff knob is fully clockwise you'll only hear the loop in the `lp` input, while if it's counterclockwise you'll only hear the loop in the `hp` input. You can adjust it to pick out the high frequencies of one loop, such as the cymbals, and the low frequencies of another loop, such as the bass drum.
+Use a device like an [Octatrack], [Digitakt], or any sampler that can output two different loops matched to the same tempo. If you only have a stereo output, you can hard-pan the loops to left and right channel before patching. Send one loop to the `lp` input and the other loop to the `hp` input. Adjusting the cutoff frequency will allow you to fade between the frequencies of the two loops. If the cutoff knob is fully clockwise you'll only hear the loop in the `lp` input, while if it's counterclockwise you'll only hear the loop in the `hp` input. You can adjust it to pick out the high frequencies of one loop, such as the cymbals, and the low frequencies of another loop, such as the bass drum.
 
 [Octatrack]: https://www.elektron.se/us/octratrack-mkii-explorer
 [Digitakt]: https://www.elektron.se/us/digitakt-explorer
