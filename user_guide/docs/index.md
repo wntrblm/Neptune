@@ -228,7 +228,7 @@ Once patched, you can use the `♆` knob to crossfade between the frequency cont
 
 The final patch explores *self-oscillation*:
 
-<!-- TODO: Illustration -->
+![Self-oscillation patch](images/patch-self-oscillation.svg){.dark-invert}
 
 -   Leave the `lp` and `hp` input jacks unpatched
 -   Turn the `salt` all the way counterclockwise
