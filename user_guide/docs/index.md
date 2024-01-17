@@ -135,6 +135,25 @@ The first patch creates a familiar *low-pass filter*:
 
 Once patched, use the `♆` knob to sweep through the filter's frequency range. Try introducing some resonance using the `reso` knob and salt using the `salt` knob.
 
+<div class="winter-audio-player">
+    <audio title="Low-pass filter sweep" controls crossorigin="anonymous">
+        <source src="./media/lp-sweep.flac" type="audio/flac" />
+        <source src="./media/lp-sweep.m4a" type="audio/x-m4a" />
+    </audio>
+</div>
+<div class="winter-audio-player">
+    <audio title="Resonant low-pass filter sweep" controls crossorigin="anonymous">
+        <source src="./media/resonant-lp-sweep.flac" type="audio/flac" />
+        <source src="./media/resonant-lp-sweep.m4a" type="audio/x-m4a" />
+    </audio>
+</div>
+<div class="winter-audio-player">
+    <audio title="Resonant, salty low-pass filter sweep" controls crossorigin="anonymous">
+        <source src="./media/resonant-salty-lp-sweep.flac" type="audio/flac" />
+        <source src="./media/resonant-salty-lp-sweep.m4a" type="audio/x-m4a" />
+    </audio>
+</div>
+
 ### High-pass filter
 
 The second patch is similar to the first and creates a *high-pass filter*:
@@ -148,6 +167,25 @@ The second patch is similar to the first and creates a *high-pass filter*:
 -   Patch the output jack to your rack's output or headphones module
 
 Once patched, use the `♆` knob to sweep through the filter's frequency range. Once again, try introducing some resonance using the `reso` knob and salt using the `salt` knob.
+
+<div class="winter-audio-player">
+    <audio title="High-pass filter sweep" controls crossorigin="anonymous">
+        <source src="./media/hp-sweep.flac" type="audio/flac" />
+        <source src="./media/hp-sweep.m4a" type="audio/x-m4a" />
+    </audio>
+</div>
+<div class="winter-audio-player">
+    <audio title="Resonant high-pass filter sweep" controls crossorigin="anonymous">
+        <source src="./media/resonant-hp-sweep.flac" type="audio/flac" />
+        <source src="./media/resonant-hp-sweep.m4a" type="audio/x-m4a" />
+    </audio>
+</div>
+<div class="winter-audio-player">
+    <audio title="Resonant, salty high-pass filter sweep" controls crossorigin="anonymous">
+        <source src="./media/resonant-salty-hp-sweep.flac" type="audio/flac" />
+        <source src="./media/resonant-salty-hp-sweep.m4a" type="audio/x-m4a" />
+    </audio>
+</div>
 
 ### High/low shelf filter
 
@@ -163,9 +201,11 @@ The next patch uses both inputs to create a high/low shelf filter:
 
 Once patched, you can use the `lp` and `hp` volume knobs as your low- and high-pass shelves. You can use resonance as a frequency boost to *emphasize* the frequencies around the cutoff frequency without cutting out the rest.
 
+<!-- TODO: Audio samples -->
+
 ### Spectral crossfader
 
-The last patch uses different signals on both inputs to create a *spectral* crossfader:
+The next patch uses different signals on both inputs to create a *spectral* crossfader:
 
 ![Spectral crossfader patch](images/patch-spectral.svg){.dark-invert}
 
@@ -176,6 +216,46 @@ The last patch uses different signals on both inputs to create a *spectral* cros
 -   Patch the output jack to your rack's output or headphones module
 
 Once patched, you can use the `♆` knob to crossfade between the frequency contents of the two signals, picking out the low frequencies of one signal and the high frequencies of the other.
+
+<div class="winter-audio-player">
+    <audio title="High/low-pass crossfade" controls crossorigin="anonymous">
+        <source src="./media/lp-hp-crossfade.flac" type="audio/flac" />
+        <source src="./media/lp-hp-crossfade.m4a" type="audio/x-m4a" />
+    </audio>
+</div>
+
+### Self-oscillation
+
+The final patch explores *self-oscillation*:
+
+<!-- TODO: Illustration -->
+
+-   Leave the `lp` and `hp` input jacks unpatched
+-   Turn the `salt` all the way counterclockwise
+-   Turn the `♆` knob to around 10 or 11 o' clock
+-   Turn the `reso` knob up to the self-oscillation point marked with the white dot, just past 2 o' clock
+-   Patch the output jack to your rack's output or headphones module
+
+Once patched, the filter should be self-oscillating and generating a sine waveform. You can use the `♆` knob to set the output signal's frequency. If you further increase resonance past the white dot, the waveform will saturate and become more harsh, like a square wave. Adding salt will cause the waveform to become more unstable and chaotic.
+
+<div class="winter-audio-player">
+    <audio title="Clean self-oscillation" controls crossorigin="anonymous">
+        <source src="./media/clean-self-oscillation-sweep.flac" type="audio/flac" />
+        <source src="./media/clean-self-oscillation-sweep.m4a" type="audio/x-m4a" />
+    </audio>
+</div>
+<div class="winter-audio-player">
+    <audio title="Full self-oscillation" controls crossorigin="anonymous">
+        <source src="./media/full-self-oscillation-sweep.flac" type="audio/flac" />
+        <source src="./media/full-self-oscillation-sweep.m4a" type="audio/x-m4a" />
+    </audio>
+</div>
+<div class="winter-audio-player">
+    <audio title="Salty self-oscillation" controls crossorigin="anonymous">
+        <source src="./media/salty-self-oscillation-sweep.flac" type="audio/flac" />
+        <source src="./media/salty-self-oscillation-sweep.m4a" type="audio/x-m4a" />
+    </audio>
+</div>
 
 
 ## Further explorations
@@ -260,3 +340,6 @@ Neptune would not be possible without the excellent educational YouTube videos b
 - Sarah Ocean
 - Izaak Hollander
 - Jeremy Leaird-Koch
+
+<link rel="stylesheet" href="/winterjs/audio-player.css">
+<script type="module" src="/winterjs/audio-player.js"></script>
