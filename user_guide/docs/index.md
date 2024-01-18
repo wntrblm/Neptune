@@ -201,7 +201,12 @@ The next patch uses both inputs to create a high/low shelf filter:
 
 Once patched, you can use the `lp` and `hp` volume knobs as your low- and high-pass shelves while the `♆` knob controls the shelving frequency. You can use resonance as a frequency boost to *emphasize* the frequencies around the shelving frequency without cutting out the rest.
 
-<!-- TODO: Audio samples -->
+<div class="winter-audio-player">
+    <audio title="High/low shelf filter" controls crossorigin="anonymous">
+        <source src="./media/low-shelf-example.flac" type="audio/flac" />
+        <source src="./media/low-shelf-example.m4a" type="audio/x-m4a" />
+    </audio>
+</div>
 
 ### Spectral crossfader
 
@@ -264,21 +269,56 @@ These ideas go beyond the example patches and may help you explore Neptune's use
 
 ### Basic synth voice
 
+<div class="winter-audio-player">
+    <audio title="Basic low-pass synth voice" controls loop crossorigin="anonymous">
+        <source src="./media/simple-lp-synth-voice-loop.flac" type="audio/flac" />
+        <source src="./media/simple-lp-synth-voice-loop.m4a" type="audio/x-m4a" />
+    </audio>
+</div>
+
 Use any oscillator as the input for the `lp` in, preferably with a sharp waveform like a saw or square. Use an envelope going the `fm1` and `vol` inputs. Trigger the envelope with a gate source from a keyboard or sequencer. Adjust the envelope timings to get long drones notes, or quick percussive ones. Adjust the cutoff frequency, `fm1` amount, resonance, and salt to hear the range of possible sounds from the low-pass filter.
 
 ### Spectral crossfading synth voice
+
+<div class="winter-audio-player">
+    <audio title="Spectral crossfading synth voice" controls loop crossorigin="anonymous">
+        <source src="./media/crossfading-synth-voice-loop.flac" type="audio/flac" />
+        <source src="./media/crossfading-synth-voice-loop.m4a" type="audio/x-m4a" />
+    </audio>
+</div>
 
 Patch one oscillator to the `lp` input and another oscillator to the `hp` input, or use different waveforms from the same oscillator. Make sure the oscillators are tuned close to each other for the most harmonious sound. Listen to how the filter can fade between the frequencies of the two oscillator signals. Plug one envelope to `fm1` and a different envelope to `vol`. Trigger the envelopes with the same gate source, such as a keyboard or sequencer. Try different envelope shapes to get different responses, and listen to how different input signals and volumes effect the sound. Try different oscillator tunings, at octaves or ratios for nice harmonic sounds, or detuned for more dissonant ones.
 
 ### Kick drum voice
 
+<div class="winter-audio-player">
+    <audio title="Kick drum voice" controls crossorigin="anonymous">
+        <source src="./media/kick-drum-voice.flac" type="audio/flac" />
+        <source src="./media/kick-drum-voice.m4a" type="audio/x-m4a" />
+    </audio>
+</div>
+
 Leave the `hp` and `lp` inputs unpatched. Turn `reso` up until the filter starts self oscillating. Send a fast, exponential envelope to `fm1` input and a second slower envelope to `vol`. The fast exponential envelope is the kick drum’s pitch sweep, whose intensity is adjusted with the `fm1` attenuverter. Adjust the cutoff frequency to set the base pitch of the drum sound, for example set it to around 9 o’clock for a low bass drum sound. Try increasing the resonance or adding salt to increase the grittiness of the drum.
 
 ### Chaotic oscillator
 
+<div class="winter-audio-player">
+    <audio title="Chaotic oscillator" controls crossorigin="anonymous">
+        <source src="./media/chaotic-oscillation.flac" type="audio/flac" />
+        <source src="./media/chaotic-oscillation.m4a" type="audio/x-m4a" />
+    </audio>
+</div>
+
 Leave the `hp` and `lp` inputs unpatched and turn `reso` up until the filter starts self oscillating. Turn `salt` up until it *just* starts to get chaotic. The filter cutoff frequency will twist and wobble around, making a chaotic output which is a combination of feedback effects. Try adjusting the cutoff frequency, resonance, and salt to get a whole spectrum of sounds, from stable and harmonious, to wild and unstable.
 
 ### Drum effects
+
+<div class="winter-audio-player">
+    <audio title="Chaotic oscillator" controls crossorigin="anonymous">
+        <source src="./media/drum-effects.flac" type="audio/flac" />
+        <source src="./media/drum-effects.m4a" type="audio/x-m4a" />
+    </audio>
+</div>
 
 Send a drum mix, such as a recording or a mix of synthesized drums, to both the `lp` and `hp` inputs. This will make the filter act like [a shelf filter](#highlow-shelf-filter). The `lp` and `hp` volume knobs act as the level for the low shelf and the high shelf, while the cutoff frequency controls the crossover point of the shelves. Try adding a bit of resonance, lowering the high pass volume a bit to make a low shelf filter, and adjusting the cutoff frequency to target specific frequencies in the drum mix. For example try to emphasizing the snare or getting rid of some of the high frequencies without cutting them out completely like on a traditional low pass filter.
 
