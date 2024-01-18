@@ -314,7 +314,7 @@ Leave the `hp` and `lp` inputs unpatched and turn `reso` up until the filter sta
 ### Drum effects
 
 <div class="winter-audio-player">
-    <audio title="Chaotic oscillator" controls crossorigin="anonymous">
+    <audio title="Drum effects" controls crossorigin="anonymous">
         <source src="./media/drum-effects.flac" type="audio/flac" />
         <source src="./media/drum-effects.m4a" type="audio/x-m4a" />
     </audio>
