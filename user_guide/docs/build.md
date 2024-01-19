@@ -17,7 +17,7 @@ This is a **beginner level** kit. Some soldering experience is helpful but not r
 This build takes around **one hour** to complete.
 
 [discord]: https://discord.gg/UpfqghQ
-[email]: support@winterbloom.com
+[email]: mailto:support@winterbloom.com
 [Helium kit]: https://winterbloom.com/shop/helium-kit
 [adafruit soldering guide]: https://learn.adafruit.com/adafruit-guide-excellent-soldering
 
