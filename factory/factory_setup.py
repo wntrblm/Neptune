@@ -5,8 +5,6 @@
 import argparse
 from pathlib import Path
 import time
-import wave
-from importlib_metadata import distribution
 import numpy as np
 
 from wintertools import reportcard, thermalprinter, oscilloscope, waveform
@@ -55,7 +53,7 @@ MEASUREMENTS = {
     "knob-hp-closed": dict(
         name="Knobs: High pass closed",
         fn="knob_tests_high_pass_fully_closed",
-        strategy="passfail"
+        strategy="passfail",
     ),
     "knob-self-osc": dict(
         name="Knobs: Self oscillation",
@@ -166,7 +164,9 @@ def check_measurements(measurements: dict[str, waveform.Waveform]):
         details = ""
 
         if strategy == "passfail":
-            passfail = waveform.WaveformPassFail.load_from_image(f"./references/{key}.png")
+            passfail = waveform.WaveformPassFail.load_from_image(
+                f"./references/{key}.png"
+            )
 
             result = passfail.compare(wf)
 
@@ -177,7 +177,9 @@ def check_measurements(measurements: dict[str, waveform.Waveform]):
 
         elif strategy == "selfosc":
             # Just check frequency and amplitude
-            passed = wf.frequency > 100 and wf.frequency < 20_000 and wf.voltage_span > 5
+            passed = (
+                wf.frequency > 100 and wf.frequency < 20_000 and wf.voltage_span > 5
+            )
 
         if passed:
             print(f"✓ {name}: {details}")
@@ -289,9 +291,11 @@ def main():
         return create_references()
 
     report = reportcard.Report(
-        ulid=args.existing,
         name="Neptune",
     )
+
+    if args.existing:
+        report.ulid = args.existing
 
     hubble = None
     measurements = None
@@ -310,7 +314,6 @@ def main():
         measurements = take_measurements(scope=scope, lens=lens)
 
         print("# Saving measurements")
-        save_measurements(id=report.ulid, measurements=measurements)
 
     else:
         print("# Loading measurements")
@@ -370,17 +373,20 @@ def main():
     report.sections.append(waveform_section)
 
     print(report)
-    report.save()
-    reportcard.render_html(report)
 
     if report.succeeded:
         print("PASSED")
         if hubble:
             hubble.success()
     else:
+        report.ulid = "failed"
         print("FAILED")
         if hubble:
             hubble.fail()
+
+    save_measurements(id=report.ulid, measurements=measurements)
+    report.save()
+    reportcard.render_html(report)
 
     if (not args.existing or args.reprint) and report.succeeded:
         report_image = reportcard.render_image(report)

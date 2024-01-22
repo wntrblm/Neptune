@@ -90,7 +90,7 @@ class NeptuneLens:
         # the resonance
         self.cutoff_knob = CCW
         self.fm1_knob = CW
-        self.fm1_cv = 4.0
+        self.fm1_cv = 6
 
         self.reso_knob = CW
         self.lp_jack_to_fg = True
@@ -103,7 +103,7 @@ class NeptuneLens:
         # the feedback distortion
         self.cutoff_knob = CCW
         self.fm1_knob = CW
-        self.fm1_cv = 4.0
+        self.fm1_cv = 6.0
 
         self.salt_knob = CW
         self.lp_jack_to_fg = True
@@ -150,7 +150,7 @@ class NeptuneLens:
         self.lp_vol_knob = CW
         self.cutoff_knob = CCW
         self.fm1_knob = CW
-        self.fm1_cv = 4.0
+        self.fm1_cv = 6
         self.reso_cv = 7.8
         self.lp_jack_to_fg = True
 
@@ -159,7 +159,7 @@ class NeptuneLens:
         self.lp_vol_knob = CW
         self.cutoff_knob = CCW
         self.fm1_knob = CW
-        self.fm1_cv = 4
+        self.fm1_cv = 7
         self.salt_cv = 5
         self.lp_jack_to_fg = True
 
