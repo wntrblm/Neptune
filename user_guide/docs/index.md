@@ -245,6 +245,7 @@ Once patched, the filter should be self-oscillating and generating a sine wavefo
 
 These ideas go beyond the example patches and may help you explore Neptune's uses and sonic possibilities.
 
+
 ### Basic synth voice
 
 <winter-audio-player title="Basic low-pass synth voice">
@@ -253,6 +254,7 @@ These ideas go beyond the example patches and may help you explore Neptune's use
 </winter-audio-player>
 
 Use any oscillator as the input for the ++"lp"++ in, preferably with a sharp waveform like a saw or square. Use an envelope going the ++"fm1"++ and ++"vol"++ inputs. Trigger the envelope with a gate source from a keyboard or sequencer. Adjust the envelope timings to get long drones notes, or quick percussive ones. Adjust the cutoff frequency, ++"fm1"++ amount, resonance, and salt to hear the range of possible sounds from the low-pass filter.
+
 
 ### Spectral crossfading synth voice
 
@@ -263,6 +265,7 @@ Use any oscillator as the input for the ++"lp"++ in, preferably with a sharp wav
 
 Patch one oscillator to the ++"lp"++ input and another oscillator to the ++"lp"++ input, or use different waveforms from the same oscillator. Make sure the oscillators are tuned close to each other for the most harmonious sound. Listen to how the filter can fade between the frequencies of the two oscillator signals. Plug one envelope to ++"fm1"++ and a different envelope to ++"vol"++. Trigger the envelopes with the same gate source, such as a keyboard or sequencer. Try different envelope shapes to get different responses, and listen to how different input signals and volumes effect the sound. Try different oscillator tunings, at octaves or ratios for nice harmonic sounds, or detuned for more dissonant ones.
 
+
 ### Kick drum voice
 
 <winter-audio-player title="Kick drum voice">
@@ -271,6 +274,7 @@ Patch one oscillator to the ++"lp"++ input and another oscillator to the ++"lp"+
 </winter-audio-player>
 
 Leave the ++"lp"++ and ++"lp"++ inputs unpatched. Turn ++"reso"++ up until the filter starts self oscillating. Send a fast, exponential envelope to ++"fm1"++ input and a second slower envelope to ++"vol"++. The fast exponential envelope is the kick drum’s pitch sweep, whose intensity is adjusted with the ++"fm1"++ attenuverter. Adjust the cutoff frequency to set the base pitch of the drum sound, for example set it to around 9 o’clock for a low bass drum sound. Try increasing the resonance or adding salt to increase the grittiness of the drum.
+
 
 ### Chaotic oscillator
 
@@ -281,6 +285,7 @@ Leave the ++"lp"++ and ++"lp"++ inputs unpatched. Turn ++"reso"++ up until the f
 
 Leave the ++"lp"++ and ++"lp"++ inputs unpatched and turn ++"reso"++ up until the filter starts self oscillating. Turn ++"salt"++ up until it *just* starts to get chaotic. The filter cutoff frequency will twist and wobble around, making a chaotic output which is a combination of feedback effects. Try adjusting the cutoff frequency, resonance, and salt to get a whole spectrum of sounds, from stable and harmonious, to wild and unstable.
 
+
 ### Drum effects
 
 <winter-audio-player title="Drum effects">
@@ -290,6 +295,7 @@ Leave the ++"lp"++ and ++"lp"++ inputs unpatched and turn ++"reso"++ up until th
 
 Send a drum mix, such as a recording or a mix of synthesized drums, to both the ++"lp"++ and ++"lp"++ inputs. This will make the filter act like [a shelf filter](#highlow-shelf-filter). The ++"lp"++ and ++"lp"++ volume knobs act as the level for the low shelf and the high shelf, while the cutoff frequency controls the crossover point of the shelves. Try adding a bit of resonance, lowering the high pass volume a bit to make a low shelf filter, and adjusting the cutoff frequency to target specific frequencies in the drum mix. For example try to emphasizing the snare or getting rid of some of the high frequencies without cutting them out completely like on a traditional low pass filter.
 
+
 ### Loop crossfader
 
 Use a device like an [Octatrack], [Digitakt], or any sampler that can output two different loops matched to the same tempo. If you only have a stereo output, you can hard-pan the loops to left and right channel before patching. Send one loop to the ++"lp"++ input and the other loop to the ++"lp"++ input. Adjusting the cutoff frequency will allow you to fade between the frequencies of the two loops. If the cutoff knob is fully clockwise you'll only hear the loop in the ++"lp"++ input, while if it's counterclockwise you'll only hear the loop in the ++"lp"++ input. You can adjust it to pick out the high frequencies of one loop, such as the cymbals, and the low frequencies of another loop, such as the bass drum.
@@ -297,11 +303,13 @@ Use a device like an [Octatrack], [Digitakt], or any sampler that can output two
 [Octatrack]: https://www.elektron.se/us/octratrack-mkii-explorer
 [Digitakt]: https://www.elektron.se/us/digitakt-explorer
 
+
 ### CV filter
 
 Neptune is *technically* DC-coupled, so will pass and filter CV signals just as it does audio signals. If you send a signal to the ++"lp"++ input then Neptune will act like a *slew limiter*, limiting how fast the signal can move. If you use the ++"lp"++ input then Neptune will act like a gate to trigger converter, where sudden changes will be passed through but the output will settle back to the value at the ++"lp"++ input. Increasing resonance will cause Neptune to overshoot the input value and "ring".
 
-Note that the cutoff knob, ++"♆"++, is designed with audio in mind, so the lowest cutoff frequency the knob can reach is around `5 Hz`, however, you can use the ++"fm1"++ input along with its attenuverter to push the cutoff frequency even lower. Also keep in mind that since Neptune wasn't really designed for DC accuracy, it won't work well with sensitive CV signals like `1 V / Octave` pitch signals.
+Note that while Neptune can do some fun stuff with CV, it's very much designed with audio in mind which brings some limitations. First, the lowest cutoff frequency that the ++"♆"++ knob can reach is around `5 Hz`, however, you can use the ++"fm1"++ input along with its attenuverter to push the cutoff frequency even lower. Second, Neptune wasn't really designed for DC accuracy so it won't work well with sensitive CV signals like `1 V / Octave` pitch signals. Finally, Neptune's output can have a DC offset of up to `±2 V`, however, you can mitigate this a bit by mixing a constant voltage in with the ++"lp"++ input.
+
 
 ## Open source hardware & software
 
@@ -338,6 +346,7 @@ We have stress tested Neptune under the following conditions. These are provided
 -   Output shorted to ground: at least `60 minutes`
 
 [email]: mailto:support@winterbloom.com
+
 
 ## Acknowledgments and thanks
 
