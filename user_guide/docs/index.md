@@ -322,7 +322,7 @@ The [hardware design][hardware source] is available under the permissive [CERN-O
 <!-- ![Open Source Hardware Association mark](images/oshw.svg){: .inline .small } Neptune is [certified open source hardware][oshwa certification]. -->
 
 [hardware source]: https://github.com/wntrblm/Neptune/tree/main/hardware
-[schematics]: https://github.com/wntrblm/Neptune/raw/main/hardware/board/board.pdf
+[schematics]: https://github.com/wntrblm/Neptune/raw/main/hardware/board/mainboard.pdf
 [CERN-OHL-P v2]: https://cern-ohl.web.cern.ch/
 [KiCAD]: https://kicad.org/
 [oshwa certification]: https://TODO
