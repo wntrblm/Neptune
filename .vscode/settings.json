@@ -2,6 +2,11 @@
     "python.analysis.autoImportCompletions": true,
     "python.analysis.typeCheckingMode": "basic",
     "cSpell.words": [
-        "reso"
+        "Digitakt",
+        "Kuipers",
+        "Moritz",
+        "Octatrack",
+        "reso",
+        "Stijn"
     ]
 }

@@ -12,7 +12,7 @@ Winterbloom's [Neptune][store-assembled] is a resonant diode ladder filter inspi
 ## Specifications
 
 -   Available [assembled][store-assembled] or as a [kit][store-kit]
--   12 HP
+-   `12 HP`
 -   `+12v @ 60 mA`, `-12v @ 50 mA`
 -   `25mm` deep
 -   Separate low pass & high pass inputs
@@ -25,14 +25,15 @@ Winterbloom's [Neptune][store-assembled] is a resonant diode ladder filter inspi
 
 ## Getting support and help
 
-We want you to have a wonderful experience with your module. If you need help or run into problems, please reach out to us. Email is the best way for product issues, whereas Discord and GitHub are great for getting advice and help on how to customize your module.
+We want you to have a wonderful experience with your module. If you need help or run into problems, please reach out to us. [Email] is the best way for product issues, whereas [Discord] and [GitHub][github issues] are great for getting advice and help on how to customize your module.
 
--   Send us [an email](mailto:support@winterbloom.com)
+-   Send us [an email][email]
 -   File a bug [on GitHub][github issues]
 -   Reach out on the [Discord][discord]
 
 [github issues]: https://github.com/wntrblm/Neptune/issues
 [discord]: https://discord.gg/UpfqghQ
+[email]: mailto:support@winterbloom.com
 
 ## Installation
 
@@ -98,6 +99,7 @@ Finally, the LEDs around the ++"♆"++ knob indicate the total combined effect o
 !!! fairy "CV Range"
     Neptune's control voltages are nominally `±5 V`, but it's generally fine with voltages beyond this range. Just note that it may not respond as expected when you get far out of that range.
 
+*[CV]: Control Voltage
 
 ### Resonance
 
