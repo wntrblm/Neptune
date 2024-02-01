@@ -17,5 +17,5 @@ hubble = Hubble()
 lens = NeptuneLens(hubble)
 scope = oscilloscope.Oscilloscope()
 
-lens.reset()
+# lens.reset()
 IPython.embed()

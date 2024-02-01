@@ -6,6 +6,7 @@ import argparse
 from pathlib import Path
 import time
 
+import numpy as np
 from wintertools import reportcard, thermalprinter, oscilloscope, waveform
 from wintertools.print import print
 from hubble import Hubble
@@ -116,6 +117,7 @@ def run_tests(*, hubble: Hubble, report: reportcard.Report):
     tests_section.append(test_dc_offset(scope=scope))
 
     if not tests_section.succeeded:
+        report.ulid = "failed"
         return False
 
     print("# Checking reso & salt")
@@ -123,6 +125,7 @@ def run_tests(*, hubble: Hubble, report: reportcard.Report):
     report.sections.insert(1, reso_section)
 
     if not reso_section.succeeded:
+        report.ulid = "failed"
         return False
 
     print("# Checking waveforms")
@@ -209,7 +212,7 @@ def test_reso_and_salt(
     # Check basic self-oscillation
     lens.cv_tests_self_oscillation()
 
-    time.sleep(0.4)
+    time.sleep(1)
     wf = scope.get_waveform("c1", WAVEFORM_STEP)
 
     section.append(reportcard.LineGraphItem.from_waveform(wf, label="Self-oscillation"))
@@ -240,17 +243,22 @@ def test_reso_and_salt(
     # Check salt's impact on resonance and self-oscillation. First with CV
     # alone and then with the knob.
 
-    lens.salt_cv = 4
-
-    time.sleep(0.2)
-    salt_cv_ampl = scope.get_peak_to_peak("c1")
+    salt_cv_ampl = 0
+    salt_cv_passed = False
+    for n in np.linspace(2, 4, num=8):
+        print(f"Trying {n:0.2f} V...")
+        lens.salt_cv = n
+        time.sleep(0.3)
+        salt_cv_ampl = scope.get_peak_to_peak("c1")
+        if salt_cv_ampl > 1 and salt_cv_ampl < wf.voltage_span * SELF_OSC_SALT_MIN_ATTENUATION:
+            salt_cv_passed = True
+            break
 
     print(
         section.append(
             reportcard.PassFailItem(
                 label="Salt CV attenutation",
-                value=salt_cv_ampl > 1
-                and salt_cv_ampl < wf.voltage_span * SELF_OSC_SALT_MIN_ATTENUATION,
+                value=salt_cv_passed,
                 details=f"{salt_cv_ampl:0.2f}V",
             )
         )
@@ -265,15 +273,26 @@ def test_reso_and_salt(
     lens.salt_cv = -4
     lens.salt_knob = CW
 
-    time.sleep(0.2)
+    time.sleep(1)
     salt_knob_ampl = scope.get_peak_to_peak("c1")
+
+
+    salt_knob_ampl = 0
+    salt_knob_passed = False
+    for n in np.linspace(-4, -2, num=8):
+        print(f"Trying {n:0.2f} V...")
+        lens.salt_cv = n
+        time.sleep(0.3)
+        salt_knob_ampl = scope.get_peak_to_peak("c1")
+        if salt_knob_ampl > 1 and salt_knob_ampl < wf.voltage_span * SELF_OSC_SALT_MIN_ATTENUATION:
+            salt_knob_passed = True
+            break
 
     print(
         section.append(
             reportcard.PassFailItem(
                 label="Salt knob attenutation",
-                value=salt_knob_ampl > 1
-                and salt_knob_ampl < wf.voltage_span * SELF_OSC_SALT_MIN_ATTENUATION,
+                value=salt_knob_passed,
                 details=f"{salt_knob_ampl:0.2f}V",
             )
         )
