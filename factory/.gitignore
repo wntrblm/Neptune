@@ -6,3 +6,4 @@ logs/
 reports/
 __pycache__
 *.png
+last/

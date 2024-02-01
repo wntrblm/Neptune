@@ -165,5 +165,5 @@ class NeptuneLens:
 
     def cv_tests_self_oscillation(self):
         self.reset()
+        self.reso_cv = +4.6
         self.cutoff_knob = CENTER
-        self.reso_cv = +4.5

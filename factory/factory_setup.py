@@ -5,97 +5,157 @@
 import argparse
 from pathlib import Path
 import time
-import numpy as np
 
 from wintertools import reportcard, thermalprinter, oscilloscope, waveform
 from wintertools.print import print
 from hubble import Hubble
 
-from libneptune import NeptuneLens
+from libneptune import NeptuneLens, CW
 
-
-MEASUREMENTS = {
+WAVEFORM_TESTS = {
     "knob-lp-open": dict(
-        name="Knobs: Low pass open",
+        label="Knobs: Low pass open",
         fn="knob_tests_low_pass_fully_open",
-        strategy="passfail",
     ),
     "knob-lp-center": dict(
-        name="Knobs: Low pass center",
+        label="Knobs: Low pass center",
         fn="knob_tests_low_pass_centered",
-        strategy="passfail",
     ),
     "knob-lp-closed": dict(
-        name="Knobs: Low pass closed",
+        label="Knobs: Low pass closed",
         fn="knob_tests_low_pass_fully_closed",
-        strategy="passfail",
-    ),
-    "knob-lp-reso": dict(
-        name="Knobs: Resonant low pass",
-        fn="knob_tests_resonant_low_pass",
-        strategy="passfail",
-    ),
-    "knob-lp-salt": dict(
-        name="Knobs: Salty low pass",
-        fn="knob_tests_salty_low_pass",
-        strategy="passfail",
     ),
     "knob-hp-open": dict(
-        name="Knobs: High pass open",
+        label="Knobs: High pass open",
         fn="knob_tests_high_pass_fully_open",
-        strategy="passfail",
     ),
     "knob-hp-center": dict(
-        name="Knobs: High pass center",
+        label="Knobs: High pass center",
         fn="knob_tests_high_pass_centered",
-        strategy="passfail",
     ),
     "knob-hp-closed": dict(
-        name="Knobs: High pass closed",
+        label="Knobs: High pass closed",
         fn="knob_tests_high_pass_fully_closed",
-        strategy="passfail",
-    ),
-    "knob-self-osc": dict(
-        name="Knobs: Self oscillation",
-        fn="knob_tests_self_oscillation",
-        strategy="selfosc",
     ),
     "cv-fm1-pos": dict(
-        name="CV: FM1 full",
+        label="CV: FM1 full",
         fn="cv_tests_fm1_full",
-        strategy="passfail",
     ),
     "cv-fm1-neg": dict(
-        name="CV: FM1 inversion",
+        label="CV: FM1 inversion",
         fn="cv_tests_fm1_full_inversion",
-        strategy="passfail",
     ),
     "cv-fm2-open": dict(
-        name="CV: FM2 open",
+        label="CV: FM2 open",
         fn="cv_tests_fm2_fully_open",
-        strategy="passfail",
-    ),
-    "cv-lp-reso": dict(
-        name="CV: Resonant low pass",
-        fn="cv_tests_resonant_low_pass",
-        strategy="passfail",
-    ),
-    "cv-lp-salt": dict(
-        name="CV: Salty low pass",
-        fn="cv_tests_salty_low_pass",
-        strategy="passfail",
     ),
     "cv-vol": dict(
-        name="CV: Vol VCA",
+        label="CV: Vol VCA",
         fn="cv_tests_vol_vca",
-        strategy="passfail",
-    ),
-    "cv-self-osc": dict(
-        name="CV: Self oscillation",
-        fn="cv_tests_self_oscillation",
-        strategy="selfosc",
     ),
 }
+WAVEFORM_STEP = 1000
+
+# This is the maximum allowed DC offset for a filter to "pass" testing. Due to
+# the input offset voltage of the TL074s we used, the overall DC offset can
+# be significant, but anything under this amount is considered within spec.
+MAX_DC_OFFSET = 2
+
+# These control how self-oscillation and salt are tested.
+# Used to check that self-oscillation is happening and is appropriately loud and
+# within the right frequency range.
+SELF_OSC_MIN_AMPLITUDE = 6
+SELF_OSC_MIN_FREQUENCY = 500
+SELF_OSC_MAX_FREQUENCY = 3_000
+# U used to make sure salt has the appropriate impact on resonance.
+SELF_OSC_SALT_MIN_ATTENUATION = 0.75
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter
+    )
+    parser.add_argument(
+        "--create-references",
+        action="store_true",
+        help="Create reference pass/fail masks from existing data.",
+    )
+
+    args = parser.parse_args()
+
+    if args.create_references:
+        return create_waveform_references()
+
+    report = reportcard.Report(
+        name="Neptune",
+    )
+
+    hubble = Hubble()
+
+    run_tests(hubble=hubble, report=report)
+
+    reportcard.render_html(report)
+
+    if report.succeeded:
+        report_image = reportcard.render_image(report)
+        thermalprinter.print_me_maybe(report_image)
+
+
+def run_tests(*, hubble: Hubble, report: reportcard.Report):
+    tests_section = reportcard.Section(name="Tests")
+    report.append(tests_section)
+
+    lens = NeptuneLens(hubble)
+    scope = oscilloscope.Oscilloscope()
+    lens.reset()
+
+    print("# Configuring scope")
+    setup_scope(scope)
+
+    print("# Measuring DC offset")
+    tests_section.append(test_dc_offset(scope=scope))
+
+    if not tests_section.succeeded:
+        return False
+
+    print("# Checking reso & salt")
+    reso_section = test_reso_and_salt(scope=scope, lens=lens)
+    report.sections.insert(1, reso_section)
+
+    if not reso_section.succeeded:
+        return False
+
+    print("# Checking waveforms")
+
+    wf_measurements, wf_results = test_waveforms(scope=scope, lens=lens)
+
+    tests_section.extend(wf_results)
+    if report.succeeded:
+        report.sections.insert(
+            0,
+            reportcard.Section(
+                name="Waveforms",
+                items=create_combined_waveform_graphs(wf_measurements),
+            ),
+        )
+
+    # Done, report results
+
+    if report.succeeded:
+        hubble.success()
+    else:
+        report.ulid = "failed"
+        hubble.fail()
+
+    save_waveform_measurements(id=report.ulid, measurements=wf_measurements)
+    report.save()
+
+    return report.succeeded
+
+
+###############################################################################
+# Test methods
+###############################################################################
 
 
 def setup_scope(scope: oscilloscope.Oscilloscope):
@@ -104,33 +164,188 @@ def setup_scope(scope: oscilloscope.Oscilloscope):
     scope.set_vertical_division("c1", "4V")
     scope.set_vertical_offset("c1", "0V")
     scope.set_time_division("200us")
+    scope.set_trigger_level("c1", "0V")
 
 
-def take_measurements(
+def test_dc_offset(scope: oscilloscope.Oscilloscope) -> reportcard.PassFailItem:
+    """Measures and checks the overall DC offset of the filter."""
+    scope.set_dc_coupling("c1")
+    time.sleep(0.5)
+
+    offset = scope.get_mean("c1")
+
+    scope.set_ac_coupling("c1")
+    time.sleep(0.5)
+
+    passed = abs(offset) < MAX_DC_OFFSET
+
+    result = reportcard.PassFailItem(
+        label="DC offset",
+        value=passed,
+        details=f"{offset:0.2f}V",
+    )
+
+    print(result)
+    return result
+
+
+def test_reso_and_salt(
+    *, lens: NeptuneLens, scope: oscilloscope.Oscilloscope
+) -> reportcard.Section:
+    """Tests both resonant self-oscillation and salt.
+
+    We used a interesting technique here that plays on the relationship between
+    resonance and salt. First, we put the filter just over the threshold of
+    self-oscillation and check that there's a proper waveform. We then apply
+    salt which has the side-effect of attenuating self-oscillation. We can use
+    measure the amount of attentuation to validate salt.
+
+    One of the major reasons for using this technique over adding salt to other
+    tests is that it's difficult to see the impact of resonance and salt when
+    the input waveform volume is all the way up.
+    """
+    section = reportcard.Section(name="Reso & salt")
+
+    # Check basic self-oscillation
+    lens.cv_tests_self_oscillation()
+
+    time.sleep(0.4)
+    wf = scope.get_waveform("c1", WAVEFORM_STEP)
+
+    section.append(reportcard.LineGraphItem.from_waveform(wf, label="Self-oscillation"))
+    print(
+        section.append(
+            reportcard.PassFailItem(
+                label="Amplitude",
+                value=wf.voltage_span > SELF_OSC_MIN_AMPLITUDE,
+                details=f"{wf.voltage_span:0.2f}V",
+            )
+        )
+    )
+    print(
+        section.append(
+            reportcard.PassFailItem(
+                label="Frequency",
+                value=wf.frequency > SELF_OSC_MIN_FREQUENCY
+                and wf.frequency < SELF_OSC_MAX_FREQUENCY,
+                details=f"{wf.frequency:0.0f}Hz",
+            )
+        )
+    )
+
+    # Bail early
+    if not section.succeeded:
+        return section
+
+    # Check salt's impact on resonance and self-oscillation. First with CV
+    # alone and then with the knob.
+
+    lens.salt_cv = 4
+
+    time.sleep(0.2)
+    salt_cv_ampl = scope.get_peak_to_peak("c1")
+
+    print(
+        section.append(
+            reportcard.PassFailItem(
+                label="Salt CV attenutation",
+                value=salt_cv_ampl > 1
+                and salt_cv_ampl < wf.voltage_span * SELF_OSC_SALT_MIN_ATTENUATION,
+                details=f"{salt_cv_ampl:0.2f}V",
+            )
+        )
+    )
+
+    # Bail early
+    if not section.succeeded:
+        return section
+
+    # Now with the knob. We do a dumb trick here where we also send negative CV
+    # to offset the knob so we can see the effect more consistently.
+    lens.salt_cv = -4
+    lens.salt_knob = CW
+
+    time.sleep(0.2)
+    salt_knob_ampl = scope.get_peak_to_peak("c1")
+
+    print(
+        section.append(
+            reportcard.PassFailItem(
+                label="Salt knob attenutation",
+                value=salt_knob_ampl > 1
+                and salt_knob_ampl < wf.voltage_span * SELF_OSC_SALT_MIN_ATTENUATION,
+                details=f"{salt_knob_ampl:0.2f}V",
+            )
+        )
+    )
+
+    return section
+
+
+def test_waveforms(
+    *, scope: oscilloscope.Oscilloscope, lens: NeptuneLens
+) -> tuple[dict[str, waveform.Waveform], list[reportcard.PassFailItem]]:
+    measurements = {}
+    results = []
+
+    for name, config in WAVEFORM_TESTS.items():
+        wf = measurements[name] = measure_waveform(
+            lens_fn=config["fn"],
+            scope=scope,
+            lens=lens,
+            wait_time=0.4,
+            step=WAVEFORM_STEP,
+        )
+
+        result = check_waveform(name=name, label=config["label"], wf=wf)
+
+        print(result)
+        results.append(result)
+
+        # Bail early
+        if not result.succeeded:
+            break
+
+    return measurements, results
+
+
+###############################################################################
+# Helpers
+###############################################################################
+
+
+def measure_waveform(
     *,
+    lens_fn: str,
     scope: oscilloscope.Oscilloscope,
     lens: NeptuneLens,
     wait_time=0.4,
-    step=1000,
-) -> dict[str, waveform.Waveform]:
+    step=WAVEFORM_STEP,
+) -> waveform.Waveform:
     lens.reset()
 
-    results = {}
+    getattr(lens, lens_fn)()
 
-    for mkey, m in MEASUREMENTS.items():
-        getattr(lens, m["fn"])()
+    time.sleep(wait_time)
+    wf = scope.get_waveform("c1", step=step)
 
-        time.sleep(wait_time)
-
-        wf = scope.get_waveform("c1", step=step)
-
-        results[mkey] = wf
-        print(f"✓ Measured {m['name']}")
-
-    return results
+    return wf
 
 
-def save_measurements(id: str, measurements):
+def check_waveform(*, name: str, label: str, wf: waveform.Waveform):
+    passfail = waveform.WaveformPassFail.load_from_image(f"./references/{name}.png")
+
+    result = passfail.compare(wf)
+    passed = result.pass_ratio > 0.9
+    details = f"{result.pass_ratio * 100:.0f}%"
+
+    # Save image for debugging
+    result.composite_image.save(f"./last/{name}.png")
+
+    return reportcard.PassFailItem(label=label, value=passed, details=details)
+
+
+def save_waveform_measurements(id: str, measurements):
     dstdir = Path("./measurements")
     dstdir.mkdir(exist_ok=True)
 
@@ -140,11 +355,11 @@ def save_measurements(id: str, measurements):
         print(f"✓ Saved {dst}")
 
 
-def load_measurements(id: str):
+def load_waveform_measurements(id: str):
     results = {}
     dstdir = Path("./measurements")
 
-    for key in MEASUREMENTS.keys():
+    for key in WAVEFORM_TESTS.keys():
         dst = dstdir / f"{id}-{key}.json"
         wf = waveform.Waveform.load(dst)
         results[key] = wf
@@ -153,102 +368,11 @@ def load_measurements(id: str):
     return results
 
 
-def check_measurements(measurements: dict[str, waveform.Waveform]):
-    results = {}
-
-    for key, wf in measurements.items():
-        name = MEASUREMENTS[key]["name"]
-        strategy = MEASUREMENTS[key]["strategy"]
-
-        passed = False
-        details = ""
-
-        if strategy == "passfail":
-            passfail = waveform.WaveformPassFail.load_from_image(
-                f"./references/{key}.png"
-            )
-
-            result = passfail.compare(wf)
-
-            result.composite_image.save(f"./{key}.png")
-
-            passed = result.pass_ratio > 0.9
-            details = f"{result.pass_ratio * 100:.0f}%"
-
-        elif strategy == "selfosc":
-            # Just check frequency and amplitude
-            passed = (
-                wf.frequency > 100 and wf.frequency < 20_000 and wf.voltage_span > 5
-            )
-
-        if passed:
-            print(f"✓ {name}: {details}")
-        else:
-            print(f"!! {name}: {details}")
-
-        results[key] = reportcard.PassFailItem(
-            label=name, value=passed, details=details
-        )
-
-    return results
-
-
-def waveform_to_linegraphitem(wf, *, points=200, stroke="black", stroke_width=8):
-    return reportcard.LineGraphItem(
-        series=[
-            reportcard.Series(
-                data=wf.to_list(points),
-                stroke=stroke,
-                stroke_width=stroke_width,
-            ),
-        ],
-        graph=reportcard.LineGraph.from_waveform(wf),
-    )
-
-
-BLACKISH = "#231F20"
-TEALS = (
-    "#99D1D6",
-    "#66ADB5",
-    "#408C94",
-    "#267880",
-)
-REDS = (
-    "#F597A3",
-    "#F2727F",
-    "#DB475B",
-    "#C02435",
-)
-PURPLES = (
-    "#C7B8ED",
-    "#A38AD6",
-    "#7D61BA",
-    "#5E409E",
-)
-COLORS = np.array([TEALS, REDS, PURPLES]).T.flatten()
-DEFAULT_STROKES = (BLACKISH, TEALS[-1], REDS[-1], PURPLES[-1])
-
-
-def waveforms_to_linegraphitem(
-    wfs, *, points=200, strokes=DEFAULT_STROKES, stroke_width=4
-):
-    return reportcard.LineGraphItem(
-        series=[
-            reportcard.Series(
-                data=wf.to_list(points),
-                stroke=strokes[n % len(strokes)],
-                stroke_width=stroke_width,
-            )
-            for n, wf in enumerate(wfs)
-        ],
-        graph=reportcard.LineGraph.from_waveform(wfs[0], label=""),
-    )
-
-
-def create_references():
+def create_waveform_references():
+    print("# Creating waveform references")
     measurements_dir = Path("./measurements")
 
-    for key in MEASUREMENTS.keys():
+    for key in WAVEFORM_TESTS.keys():
         passfail = waveform.WaveformPassFail()
 
         wf_files = measurements_dir.glob(f"*-{key}.json")
@@ -263,134 +387,30 @@ def create_references():
         print(f"✓ Created {dst}")
 
 
-def main():
-    parser = argparse.ArgumentParser(
-        formatter_class=argparse.ArgumentDefaultsHelpFormatter
+def create_combined_waveform_graphs(measurements: dict[str, waveform.Waveform]):
+    graphs = []
+    lp = [
+        measurements["knob-lp-open"],
+        measurements["knob-lp-center"],
+        measurements["knob-lp-closed"],
+    ]
+    graphs.append(
+        reportcard.LineGraphItem.from_waveform(lp, label="Low pass", stroke_width=6),
     )
-    parser.add_argument(
-        "--create-references",
-        action="store_true",
-        help="Create reference masks from existing data.",
+    hp = [
+        measurements["knob-hp-open"],
+        measurements["knob-hp-center"],
+        measurements["knob-hp-closed"],
+    ]
+    graphs.append(
+        reportcard.LineGraphItem.from_waveform(hp, label="High pass", stroke_width=6),
     )
-    parser.add_argument(
-        "--existing",
-        type=str,
-        help="Load existing measurements for the given ULID",
-    )
-    parser.add_argument(
-        "--reprint",
-        action="store_true",
-        help="Reprint existing",
-    )
-    parser.add_argument("--style", choices=["full", "brief"], default="brief")
+    return graphs
 
-    args = parser.parse_args()
 
-    if args.create_references:
-        print("# Creating waveform references")
-        return create_references()
-
-    report = reportcard.Report(
-        name="Neptune",
-    )
-
-    if args.existing:
-        report.ulid = args.existing
-
-    hubble = None
-    measurements = None
-
-    if not args.existing:
-        hubble = Hubble()
-        lens = NeptuneLens(hubble)
-        scope = oscilloscope.Oscilloscope()
-
-        print("# Configuring scope")
-        setup_scope(scope)
-
-        print("# Taking measurements")
-        lens.reset()
-
-        measurements = take_measurements(scope=scope, lens=lens)
-
-        print("# Saving measurements")
-
-    else:
-        print("# Loading measurements")
-        measurements = load_measurements(args.existing)
-
-    print("# Checking waveforms")
-
-    results = check_measurements(measurements)
-
-    print("# Creating report")
-
-    waveform_section = reportcard.Section(name="Waveforms")
-
-    if args.style == "full":
-        for key, wf in measurements.items():
-            waveform_section.items.append(results[key])
-            waveform_section.items.append(waveform_to_linegraphitem(wf))
-    else:
-        lp = (
-            measurements["knob-lp-open"],
-            measurements["knob-lp-center"],
-            measurements["knob-lp-closed"],
-            measurements["knob-lp-reso"],
-            measurements["knob-lp-salt"],
-        )
-        report.sections.append(
-            reportcard.Section(
-                name="Low Pass",
-                items=[waveforms_to_linegraphitem(lp, stroke_width=6)],
-            )
-        )
-        hp = (
-            measurements["knob-hp-open"],
-            measurements["knob-hp-center"],
-            measurements["knob-hp-closed"],
-        )
-        report.sections.append(
-            reportcard.Section(
-                name="High Pass",
-                items=[waveforms_to_linegraphitem(hp, stroke_width=6)],
-            )
-        )
-        selfosc = (
-            measurements["knob-self-osc"],
-            measurements["cv-self-osc"],
-        )
-        report.sections.append(
-            reportcard.Section(
-                name="Self Osc",
-                items=[waveforms_to_linegraphitem(selfosc, stroke_width=6)],
-            )
-        )
-
-        for key, wf in measurements.items():
-            waveform_section.items.append(results[key])
-
-    report.sections.append(waveform_section)
-
-    print(report)
-
-    if report.succeeded:
-        print("PASSED")
-        if hubble:
-            hubble.success()
-    else:
-        report.ulid = "failed"
-        print("FAILED")
-        if hubble:
-            hubble.fail()
-
-    save_measurements(id=report.ulid, measurements=measurements)
-    report.save()
-    reportcard.render_html(report)
-
-    if (not args.existing or args.reprint) and report.succeeded:
-        report_image = reportcard.render_image(report)
-        thermalprinter.print_me_maybe(report_image)
+###############################################################################
+# Entry
+###############################################################################
 
 
 if __name__ == "__main__":
