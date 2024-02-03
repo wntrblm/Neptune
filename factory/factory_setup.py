@@ -338,7 +338,7 @@ def measure_waveform(
     lens_fn: str,
     scope: oscilloscope.Oscilloscope,
     lens: NeptuneLens,
-    wait_time=0.4,
+    wait_time=0.8,
     step=WAVEFORM_STEP,
 ) -> waveform.Waveform:
     lens.reset()

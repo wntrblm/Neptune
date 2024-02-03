@@ -12,6 +12,7 @@ from hubble import Hubble
 import IPython
 
 from libneptune import NeptuneLens, CCW, CW, CENTER
+from factory_setup import *
 
 hubble = Hubble()
 lens = NeptuneLens(hubble)
