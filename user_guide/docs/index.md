@@ -354,8 +354,8 @@ We have stress tested Neptune under the following conditions. These are provided
 
 Neptune would not be possible without the excellent educational YouTube videos by [Moritz Klein], and the help of him and others on his discord server. We would also like to acknowledge the following individuals for their outstanding support:
 
-- Ben Wilson
-- Sarah Ocean
-- Izaak Hollander
-- Jeremy Leaird-Koch
-- Stijn & Priscilla Haring-Kuipers
+- Sarah Ocean, for coming up with the name "Salt"
+- Izaak Hollander, for endless enthusiasm and beta testing
+- Ben Wilson, for being a well of knowledge and incredible talent
+- Jeremy Leaird-Koch, for wringing delights from Neptune in ways only he could
+- Stijn & Priscilla Haring-Kuipers, for their guidance and insight
