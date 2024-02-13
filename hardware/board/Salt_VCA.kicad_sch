@@ -7,7 +7,7 @@
   (title_block
     (title "Neptune")
     (date "2023-11-09")
-    (rev "v2")
+    (rev "v3")
     (company "Winterbloom")
     (comment 1 "Carson Walls")
     (comment 2 "CERN-OHL-P v2")
@@ -1375,15 +1375,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "C?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "C?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "C?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "C701") (unit 1)
         )
@@ -1394,7 +1385,7 @@
   (symbol (lib_id "winterbloom:TL074") (at 210.185 142.24 0) (mirror x) (unit 2)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 028af28b-1fcc-4b9f-9c7d-77b90e256576)
-    (property "Reference" "U?" (at 212.725 146.05 0)
+    (property "Reference" "U5" (at 212.725 146.05 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "TL074" (at 208.915 142.24 0)
@@ -1406,16 +1397,19 @@
     (property "Datasheet" "https://www.ti.com/lit/ds/symlink/tl071.pdf" (at 211.455 147.32 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "MPN" "TL074CPWR" (at 210.185 149.86 0)
+    (property "MPN" "TL074HIPWR" (at 210.185 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "DigiKey" "296-7198-1-ND" (at 210.185 142.24 0)
+    (property "DigiKey" "296-TL074HIPWRCT-ND" (at 210.185 142.24 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC" "C96507" (at 210.185 142.24 0)
+    (property "LCSC" "C4370424" (at 210.185 142.24 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Substitutes Allowed" "No" (at 210.185 142.24 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Notes" "TL074H over TL074C due to better input offset voltage" (at 210.185 142.24 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid a195d82f-7744-4cd1-932b-e7ce322e9e98))
@@ -1434,20 +1428,6 @@
     (pin "4" (uuid ec1e7d9e-e485-4202-b1b5-8dce6e9224f4))
     (instances
       (project "mainboard"
-        (path "/6e47ee4f-b36d-4cb2-9b20-31f755e664f7/00000000-0000-0000-0000-00005f0e55e2"
-          (reference "U?") (unit 2)
-        )
-        (path "/6e47ee4f-b36d-4cb2-9b20-31f755e664f7/00000000-0000-0000-0000-00005f016ad7"
-          (reference "U?") (unit 3)
-        )
-      )
-      (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "U?") (unit 2)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
-          (reference "U?") (unit 2)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "U5") (unit 2)
         )
@@ -1497,15 +1477,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "C?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "C?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "C?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "C704") (unit 1)
         )
@@ -1536,12 +1507,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "#PWR?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "#PWR01") (unit 1)
         )
@@ -1591,15 +1556,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "R?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "R701") (unit 1)
         )
@@ -1630,12 +1586,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "#PWR?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "#PWR0705") (unit 1)
         )
@@ -1685,15 +1635,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "R?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "R716") (unit 1)
         )
@@ -1741,7 +1682,7 @@
   (symbol (lib_id "winterbloom:Eurorack_Pot") (at 55.245 139.7 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 31b8262a-9181-4c94-818e-2227ad8c3a7b)
-    (property "Reference" "RV?" (at 52.705 136.7154 90)
+    (property "Reference" "RV701" (at 52.705 136.7154 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 52.705 139.2554 90)
@@ -1779,20 +1720,6 @@
     (pin "3" (uuid bac22053-4f79-4af6-8a98-baeaa1c8c165))
     (instances
       (project "mainboard"
-        (path "/6e47ee4f-b36d-4cb2-9b20-31f755e664f7/c72a522e-4dc4-4b2a-852d-76eeaba3c3f8"
-          (reference "RV?") (unit 1)
-        )
-      )
-      (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "RV?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
-          (reference "RV?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "RV?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "RV701") (unit 1)
         )
@@ -1842,15 +1769,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "R?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "R715") (unit 1)
         )
@@ -1881,12 +1799,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "#PWR?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "#PWR0709") (unit 1)
         )
@@ -1897,7 +1809,7 @@
   (symbol (lib_id "winterbloom:BCM847") (at 159.385 142.24 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 368ae124-8784-4b9a-9c23-2aa4b8f38071)
-    (property "Reference" "Q?" (at 156.21 131.445 90)
+    (property "Reference" "Q701" (at 156.21 131.445 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "BCM847" (at 156.21 133.985 90)
@@ -1929,12 +1841,6 @@
     (pin "6" (uuid 16c51266-1f36-454a-96c3-dc22ecfe7ad7))
     (instances
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "Q?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "Q?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "Q701") (unit 1)
         )
@@ -1989,15 +1895,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "C?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "C?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "C?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "C705") (unit 1)
         )
@@ -2047,15 +1944,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "R?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "R708") (unit 1)
         )
@@ -2103,12 +1991,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "J?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "J?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "J701") (unit 1)
         )
@@ -2158,15 +2040,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "R?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "R719") (unit 1)
         )
@@ -2177,7 +2050,7 @@
   (symbol (lib_id "Device:D_Small") (at 243.84 148.59 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 59d2057b-507b-41dd-a715-99b5f0a76e9e)
-    (property "Reference" "D?" (at 245.745 146.05 90)
+    (property "Reference" "D704" (at 245.745 146.05 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "BAS315" (at 245.745 148.59 90)
@@ -2211,15 +2084,6 @@
     (pin "2" (uuid 605fc60d-917f-4217-bdac-4c22315f4443))
     (instances
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "D?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "D?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "D?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "D704") (unit 1)
         )
@@ -2274,15 +2138,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "R?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "R710") (unit 1)
         )
@@ -2313,12 +2168,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "#PWR?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "#PWR0703") (unit 1)
         )
@@ -2329,7 +2178,7 @@
   (symbol (lib_id "Device:D_Small") (at 238.76 148.59 90) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5f8a23d1-08a8-4563-aad6-c355330e4ce8)
-    (property "Reference" "D?" (at 236.855 146.05 90)
+    (property "Reference" "D703" (at 236.855 146.05 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "BAS315" (at 236.855 148.59 90)
@@ -2363,15 +2212,6 @@
     (pin "2" (uuid f4af9a2d-0345-4d95-a265-870d3664d0e3))
     (instances
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "D?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "D?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "D?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "D703") (unit 1)
         )
@@ -2426,15 +2266,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "R?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "R717") (unit 1)
         )
@@ -2442,10 +2273,10 @@
     )
   )
 
-  (symbol (lib_id "winterbloom:TL074") (at 90.17 83.82 0) (mirror x) (unit 2)
+  (symbol (lib_id "winterbloom:TL074") (at 90.17 83.82 0) (mirror x) (unit 3)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 644a50ec-a810-4b12-b96e-43f36fbf994f)
-    (property "Reference" "U?" (at 92.71 87.63 0)
+    (property "Reference" "U5" (at 92.71 87.63 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "TL074" (at 88.9 83.82 0)
@@ -2457,16 +2288,19 @@
     (property "Datasheet" "https://www.ti.com/lit/ds/symlink/tl071.pdf" (at 91.44 88.9 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "MPN" "TL074CPWR" (at 90.17 91.44 0)
+    (property "MPN" "TL074HIPWR" (at 90.17 91.44 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "DigiKey" "296-7198-1-ND" (at 90.17 83.82 0)
+    (property "DigiKey" "296-TL074HIPWRCT-ND" (at 90.17 83.82 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC" "C96507" (at 90.17 83.82 0)
+    (property "LCSC" "C4370424" (at 90.17 83.82 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Substitutes Allowed" "No" (at 90.17 83.82 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Notes" "TL074H over TL074C due to better input offset voltage" (at 90.17 83.82 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 75f58a40-bdb9-42da-a5a2-3e9930d4a582))
@@ -2485,20 +2319,6 @@
     (pin "4" (uuid 36370a87-3cb1-47bb-8779-efdbe1f2ec63))
     (instances
       (project "mainboard"
-        (path "/6e47ee4f-b36d-4cb2-9b20-31f755e664f7/00000000-0000-0000-0000-00005f0e55e2"
-          (reference "U?") (unit 2)
-        )
-        (path "/6e47ee4f-b36d-4cb2-9b20-31f755e664f7/00000000-0000-0000-0000-00005f016ad7"
-          (reference "U?") (unit 3)
-        )
-      )
-      (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "U?") (unit 2)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
-          (reference "U?") (unit 2)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "U5") (unit 3)
         )
@@ -2548,15 +2368,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "R?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "R703") (unit 1)
         )
@@ -2567,7 +2378,7 @@
   (symbol (lib_id "Device:D_Small") (at 127.635 149.86 90) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6e06d35a-b0e4-41bf-a9ef-ce759df5c848)
-    (property "Reference" "D?" (at 130.175 147.32 90)
+    (property "Reference" "D702" (at 130.175 147.32 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "BAS315" (at 130.175 149.86 90)
@@ -2601,15 +2412,6 @@
     (pin "2" (uuid bb6d7244-2929-4118-83f0-ccfcbde48a5c))
     (instances
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "D?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "D?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "D?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "D702") (unit 1)
         )
@@ -2645,12 +2447,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "#PWR?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "#PWR0712") (unit 1)
         )
@@ -2681,12 +2477,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "#PWR?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "#PWR0711") (unit 1)
         )
@@ -2736,15 +2526,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "R?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "R722") (unit 1)
         )
@@ -2775,12 +2556,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "#PWR?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "#PWR0708") (unit 1)
         )
@@ -2811,12 +2586,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "#PWR?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "#PWR0710") (unit 1)
         )
@@ -2866,15 +2635,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "R?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "R713") (unit 1)
         )
@@ -2924,15 +2684,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "C?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "C?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "C?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "C702") (unit 1)
         )
@@ -2963,12 +2714,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "#PWR?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "#PWR0704") (unit 1)
         )
@@ -2999,12 +2744,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "#PWR?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "#PWR0701") (unit 1)
         )
@@ -3054,15 +2793,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "R?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "R706") (unit 1)
         )
@@ -3070,10 +2800,10 @@
     )
   )
 
-  (symbol (lib_id "winterbloom:TL074") (at 88.265 142.24 0) (mirror x) (unit 2)
+  (symbol (lib_id "winterbloom:TL074") (at 88.265 142.24 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a45564d1-7560-4fd4-9f15-b90dad7808f5)
-    (property "Reference" "U?" (at 90.805 146.05 0)
+    (property "Reference" "U5" (at 90.805 146.05 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "TL074" (at 86.995 142.24 0)
@@ -3085,16 +2815,19 @@
     (property "Datasheet" "https://www.ti.com/lit/ds/symlink/tl071.pdf" (at 89.535 147.32 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "MPN" "TL074CPWR" (at 88.265 149.86 0)
+    (property "MPN" "TL074HIPWR" (at 88.265 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "DigiKey" "296-7198-1-ND" (at 88.265 142.24 0)
+    (property "DigiKey" "296-TL074HIPWRCT-ND" (at 88.265 142.24 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC" "C96507" (at 88.265 142.24 0)
+    (property "LCSC" "C4370424" (at 88.265 142.24 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Substitutes Allowed" "No" (at 88.265 142.24 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Notes" "TL074H over TL074C due to better input offset voltage" (at 88.265 142.24 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 1c5d9f53-9d72-4fa3-9d13-04b421b9ceb7))
@@ -3113,20 +2846,6 @@
     (pin "4" (uuid a0cef9d9-d73d-4249-9a83-f36f2094f36c))
     (instances
       (project "mainboard"
-        (path "/6e47ee4f-b36d-4cb2-9b20-31f755e664f7/00000000-0000-0000-0000-00005f0e55e2"
-          (reference "U?") (unit 2)
-        )
-        (path "/6e47ee4f-b36d-4cb2-9b20-31f755e664f7/00000000-0000-0000-0000-00005f016ad7"
-          (reference "U?") (unit 3)
-        )
-      )
-      (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "U?") (unit 2)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
-          (reference "U?") (unit 2)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "U5") (unit 1)
         )
@@ -3176,15 +2895,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "R?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "R709") (unit 1)
         )
@@ -3215,12 +2925,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "#PWR?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "#PWR0707") (unit 1)
         )
@@ -3270,15 +2974,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "R?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "R705") (unit 1)
         )
@@ -3289,7 +2984,7 @@
   (symbol (lib_id "winterbloom:TL074") (at 52.07 81.28 0) (mirror x) (unit 4)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b77a56c9-4f0a-44a6-a8aa-d58626eef36d)
-    (property "Reference" "U?" (at 53.975 85.09 0)
+    (property "Reference" "U5" (at 53.975 85.09 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "TL074" (at 50.8 81.28 0)
@@ -3301,16 +2996,19 @@
     (property "Datasheet" "https://www.ti.com/lit/ds/symlink/tl071.pdf" (at 53.34 86.36 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "MPN" "TL074CPWR" (at 52.07 88.9 0)
+    (property "MPN" "TL074HIPWR" (at 52.07 88.9 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "DigiKey" "296-7198-1-ND" (at 52.07 81.28 0)
+    (property "DigiKey" "296-TL074HIPWRCT-ND" (at 52.07 81.28 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC" "C96507" (at 52.07 81.28 0)
+    (property "LCSC" "C4370424" (at 52.07 81.28 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Substitutes Allowed" "No" (at 52.07 81.28 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Notes" "TL074H over TL074C due to better input offset voltage" (at 52.07 81.28 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid a2ca0826-f7dc-487a-972c-41c8a7ca6e38))
@@ -3329,20 +3027,6 @@
     (pin "4" (uuid 09329d09-8de2-49b9-8ca6-0d0ca0910910))
     (instances
       (project "mainboard"
-        (path "/6e47ee4f-b36d-4cb2-9b20-31f755e664f7/00000000-0000-0000-0000-00005f0e55e2"
-          (reference "U?") (unit 4)
-        )
-        (path "/6e47ee4f-b36d-4cb2-9b20-31f755e664f7/00000000-0000-0000-0000-00005f016ad7"
-          (reference "U?") (unit 1)
-        )
-      )
-      (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "U?") (unit 4)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "U?") (unit 4)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "U5") (unit 4)
         )
@@ -3392,15 +3076,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "R?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "R721") (unit 1)
         )
@@ -3450,15 +3125,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "R?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "R711") (unit 1)
         )
@@ -3489,12 +3155,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "#PWR?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "#PWR0702") (unit 1)
         )
@@ -3505,7 +3165,7 @@
   (symbol (lib_id "Device:D_Small") (at 101.6 83.82 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c9fae58e-72a4-47d8-a920-3e2ba82bb4fa)
-    (property "Reference" "D?" (at 101.6 87.63 0)
+    (property "Reference" "D701" (at 101.6 87.63 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "BAS315" (at 101.6 90.17 0)
@@ -3539,15 +3199,6 @@
     (pin "2" (uuid 5f748238-2717-4d5e-8a02-f350cefe8dd6))
     (instances
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "D?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "D?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "D?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "D701") (unit 1)
         )
@@ -3602,15 +3253,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "R?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "R702") (unit 1)
         )
@@ -3660,15 +3302,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "R?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "R704") (unit 1)
         )
@@ -3718,15 +3351,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "C?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "C?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "C?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "C703") (unit 1)
         )
@@ -3813,15 +3437,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "R?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "R712") (unit 1)
         )
@@ -3871,15 +3486,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "R?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "R720") (unit 1)
         )
@@ -3929,15 +3535,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "R?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "R714") (unit 1)
         )
@@ -3987,15 +3584,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "R?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "R707") (unit 1)
         )
@@ -4045,15 +3633,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "R?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/48d891c0-35ba-4c8e-a930-c990a10298eb"
-          (reference "R?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/0f8a3c3e-e197-47b5-881d-2ae4e2374020"
           (reference "R718") (unit 1)
         )

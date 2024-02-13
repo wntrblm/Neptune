@@ -6,8 +6,8 @@
 
   (title_block
     (title "Neptune")
-    (date "2023-11-09")
-    (rev "v2")
+    (date "2024-02-13")
+    (rev "v3")
     (company "Winterbloom")
     (comment 1 "Carson Walls")
     (comment 2 "CERN-OHL-P v2")

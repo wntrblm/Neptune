@@ -7,7 +7,7 @@
   (title_block
     (title "Neptune")
     (date "2023-11-09")
-    (rev "v2")
+    (rev "v3")
     (company "Winterbloom")
     (comment 1 "Carson Walls")
     (comment 2 "CERN-OHL-P v2")
@@ -838,7 +838,7 @@
   (symbol (lib_id "winterbloom:TL074") (at 86.995 127.635 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 066b38ba-ad2b-4633-a696-dc1ef7f2d93f)
-    (property "Reference" "U?" (at 89.535 131.445 0)
+    (property "Reference" "U1" (at 89.535 131.445 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "TL074" (at 85.725 127.635 0)
@@ -850,16 +850,19 @@
     (property "Datasheet" "https://www.ti.com/lit/ds/symlink/tl071.pdf" (at 88.265 132.715 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "MPN" "TL074CPWR" (at 86.995 135.255 0)
+    (property "MPN" "TL074HIPWR" (at 86.995 135.255 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "DigiKey" "296-7198-1-ND" (at 86.995 127.635 0)
+    (property "DigiKey" "296-TL074HIPWRCT-ND" (at 86.995 127.635 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC" "C96507" (at 86.995 127.635 0)
+    (property "LCSC" "C4370424" (at 86.995 127.635 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Substitutes Allowed" "No" (at 86.995 127.635 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Notes" "TL074H over TL074C due to better input offset voltage" (at 86.995 127.635 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid d678178b-8bb7-4890-9523-f091f6e6c3bf))
@@ -878,21 +881,7 @@
     (pin "4" (uuid 57fd0ba0-91d6-495e-a418-a0b775ce4509))
     (instances
       (project "mainboard"
-        (path "/6e47ee4f-b36d-4cb2-9b20-31f755e664f7/00000000-0000-0000-0000-00005f0e55e2"
-          (reference "U?") (unit 1)
-        )
-        (path "/6e47ee4f-b36d-4cb2-9b20-31f755e664f7/00000000-0000-0000-0000-00005f016ad7"
-          (reference "U?") (unit 4)
-        )
-      )
-      (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "U?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
-          (reference "U1") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
           (reference "U1") (unit 1)
         )
       )
@@ -902,7 +891,7 @@
   (symbol (lib_id "winterbloom:TL074") (at 235.585 116.205 0) (mirror x) (unit 2)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 06af826f-a60c-47d0-904e-27ea30cb4858)
-    (property "Reference" "U?" (at 238.125 120.015 0)
+    (property "Reference" "U1" (at 238.125 120.015 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "TL074" (at 234.315 116.205 0)
@@ -914,16 +903,19 @@
     (property "Datasheet" "https://www.ti.com/lit/ds/symlink/tl071.pdf" (at 236.855 121.285 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "MPN" "TL074CPWR" (at 235.585 123.825 0)
+    (property "MPN" "TL074HIPWR" (at 235.585 123.825 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "DigiKey" "296-7198-1-ND" (at 235.585 116.205 0)
+    (property "DigiKey" "296-TL074HIPWRCT-ND" (at 235.585 116.205 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC" "C96507" (at 235.585 116.205 0)
+    (property "LCSC" "C4370424" (at 235.585 116.205 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Substitutes Allowed" "No" (at 235.585 116.205 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Notes" "TL074H over TL074C due to better input offset voltage" (at 235.585 116.205 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 2bc051ca-f78a-47d1-861b-67d242a03671))
@@ -942,21 +934,7 @@
     (pin "4" (uuid d40f2524-2dcd-4f32-9eb1-5d989b8a0092))
     (instances
       (project "mainboard"
-        (path "/6e47ee4f-b36d-4cb2-9b20-31f755e664f7/00000000-0000-0000-0000-00005f0e55e2"
-          (reference "U?") (unit 2)
-        )
-        (path "/6e47ee4f-b36d-4cb2-9b20-31f755e664f7/00000000-0000-0000-0000-00005f016ad7"
-          (reference "U?") (unit 3)
-        )
-      )
-      (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "U?") (unit 2)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
-          (reference "U1") (unit 2)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
           (reference "U1") (unit 2)
         )
       )
@@ -986,9 +964,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
           (reference "#PWR0301") (unit 1)
         )
@@ -1038,12 +1013,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "C?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "C?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
           (reference "C301") (unit 1)
         )
@@ -1093,9 +1062,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "R?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
           (reference "R303") (unit 1)
         )
@@ -1126,9 +1092,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
           (reference "#PWR0306") (unit 1)
         )
@@ -1139,7 +1102,7 @@
   (symbol (lib_id "winterbloom:Eurorack_Pot") (at 178.435 118.745 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3ca865b8-81fa-4910-8e9d-c390da0d836e)
-    (property "Reference" "RV?" (at 176.784 115.6608 90)
+    (property "Reference" "RV302" (at 176.784 115.6608 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 176.784 118.085 90)
@@ -1177,14 +1140,6 @@
     (pin "3" (uuid 6ec748f4-b9fa-4adc-9d24-77b1897d4350))
     (instances
       (project "mainboard"
-        (path "/6e47ee4f-b36d-4cb2-9b20-31f755e664f7/c72a522e-4dc4-4b2a-852d-76eeaba3c3f8"
-          (reference "RV?") (unit 1)
-        )
-      )
-      (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "RV?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
           (reference "RV302") (unit 1)
         )
@@ -1215,9 +1170,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
           (reference "#PWR0305") (unit 1)
         )
@@ -1267,12 +1219,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "C?") (unit 1)
-        )
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3b1fa3f2-493c-449c-a2d6-10ea677680a0"
-          (reference "C?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
           (reference "C302") (unit 1)
         )
@@ -1303,9 +1249,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
           (reference "#PWR0303") (unit 1)
         )
@@ -1336,9 +1279,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
           (reference "#PWR0308") (unit 1)
         )
@@ -1369,9 +1309,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
           (reference "#PWR0302") (unit 1)
         )
@@ -1419,9 +1356,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "J?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
           (reference "J302") (unit 1)
         )
@@ -1471,9 +1405,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "R?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
           (reference "R304") (unit 1)
         )
@@ -1523,9 +1454,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "R?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
           (reference "R305") (unit 1)
         )
@@ -1575,9 +1503,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "R?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
           (reference "R302") (unit 1)
         )
@@ -1627,9 +1552,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/2fb572ad-24ea-4cbe-ad52-b6fc76c2d017"
-          (reference "R205") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
           (reference "R307") (unit 1)
         )
@@ -1687,9 +1609,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "R?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
           (reference "R306") (unit 1)
         )
@@ -1739,9 +1658,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "R?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
           (reference "R301") (unit 1)
         )
@@ -1772,9 +1688,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
           (reference "#PWR0307") (unit 1)
         )
@@ -1785,7 +1698,7 @@
   (symbol (lib_id "winterbloom:Eurorack_Pot") (at 47.625 93.345 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d29274b1-6f23-497b-8b2e-7c340c30de52)
-    (property "Reference" "RV?" (at 45.72 91.6304 90)
+    (property "Reference" "RV303" (at 45.72 91.6304 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 45.72 94.1704 90)
@@ -1823,14 +1736,6 @@
     (pin "3" (uuid 5306dba5-ad7c-4433-ad19-e010c2413200))
     (instances
       (project "mainboard"
-        (path "/6e47ee4f-b36d-4cb2-9b20-31f755e664f7/c72a522e-4dc4-4b2a-852d-76eeaba3c3f8"
-          (reference "RV?") (unit 1)
-        )
-      )
-      (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "RV?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
           (reference "RV303") (unit 1)
         )
@@ -1841,7 +1746,7 @@
   (symbol (lib_id "winterbloom:Eurorack_Pot") (at 47.625 125.095 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d667661a-fbfa-4ad0-b329-ff3278382ae1)
-    (property "Reference" "RV?" (at 45.9741 122.0108 90)
+    (property "Reference" "RV301" (at 45.9741 122.0108 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 45.9741 124.435 90)
@@ -1879,14 +1784,6 @@
     (pin "3" (uuid c166a930-9878-4866-9839-3657d0c09c98))
     (instances
       (project "mainboard"
-        (path "/6e47ee4f-b36d-4cb2-9b20-31f755e664f7/c72a522e-4dc4-4b2a-852d-76eeaba3c3f8"
-          (reference "RV?") (unit 1)
-        )
-      )
-      (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "RV?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
           (reference "RV301") (unit 1)
         )
@@ -1917,9 +1814,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
           (reference "#PWR0304") (unit 1)
         )
@@ -1967,9 +1861,6 @@
         )
       )
       (project "mainboard"
-        (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a"
-          (reference "J?") (unit 1)
-        )
         (path "/960bd036-bf0c-45ea-9f41-1321756e0e5a/3a92f97b-4bc8-4105-8c8c-23425d8f2338"
           (reference "J301") (unit 1)
         )
